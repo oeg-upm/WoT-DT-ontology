@@ -1,0 +1,29 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "dt:MainComponent" "dt:BehavioralModel" "dt:AggregatedDigitalTwin" "dt:ConnectionPoint" "dt:PhysicalEntity" "dt:SHACLModel" "dt:DigitalTwinData" "dt:DigitalTwinService" "dt:OntologyModel" "saref:Device" "td:InteractionAffordance" "dt:PhysicalModel" "dt:SemanticModel" "dt:DigitalTwinConnection" "dt:DigitalTwinInstance" "dt:GeometricModel" "dt:VirtualEntity" "dcat:Resource" "dt:DigitalTwin" "saref:Sensor" "saref:Actuator" "td:Thing" "dt:Model" "dt:RulesModel" "dt:MappingModel" "dt:Connection" "dt:DigitalTwinDimension" ; /*classes style*/
+	"dt:DigitalTwinService" -> "dt:DigitalTwinDimension" [ label = "rdfs:subClassOf" ];
+	"dt:DigitalTwinData" -> "dt:DigitalTwinDimension" [ label = "rdfs:subClassOf" ];
+	"dt:MainComponent" -> "dt:Connection" [ label = "rdfs:subClassOf" ];
+	"saref:Actuator" -> "saref:Device" [ label = "rdfs:subClassOf" ];
+	"saref:Device" -> "dt:Connection" [ label = "rdfs:subClassOf" ];
+	"dt:SemanticModel" -> "dt:Connection" [ label = "rdfs:subClassOf" ];
+	"saref:Sensor" -> "saref:Device" [ label = "rdfs:subClassOf" ];
+	"dt:SHACLModel" -> "dt:SemanticModel" [ label = "rdfs:subClassOf" ];
+	"dt:OntologyModel" -> "dt:SemanticModel" [ label = "rdfs:subClassOf" ];
+	"dt:PhysicalModel" -> "dt:Connection" [ label = "rdfs:subClassOf" ];
+	"dt:Model" -> "dt:ConnectionPoint" [ label = "rdfs:subClassOf" ];
+	"dt:DigitalTwinInstance" -> "dt:DigitalTwin" [ label = "rdfs:subClassOf" ];
+	"dt:PhysicalEntity" -> "dt:DigitalTwinDimension" [ label = "rdfs:subClassOf" ];
+	"dt:GeometricModel" -> "dt:Connection" [ label = "rdfs:subClassOf" ];
+	"dt:DigitalTwin" -> "td:Thing" [ label = "rdfs:subClassOf" ];
+	"dcat:Resource" -> "dt:ConnectionPoint" [ label = "rdfs:subClassOf" ];
+	"dt:VirtualEntity" -> "dt:DigitalTwinDimension" [ label = "rdfs:subClassOf" ];
+	"dt:RulesModel" -> "dt:Connection" [ label = "rdfs:subClassOf" ];
+	"dt:BehavioralModel" -> "dt:Connection" [ label = "rdfs:subClassOf" ];
+	"dt:AggregatedDigitalTwin" -> "dt:DigitalTwin" [ label = "rdfs:subClassOf" ];
+	"dt:DigitalTwinConnection" -> "dt:DigitalTwinDimension" [ label = "rdfs:subClassOf" ];
+	"td:InteractionAffordance" -> "dt:ConnectionPoint" [ label = "rdfs:subClassOf" ];
+	"dt:MappingModel" -> "dt:SemanticModel" [ label = "rdfs:subClassOf" ];
+
+}

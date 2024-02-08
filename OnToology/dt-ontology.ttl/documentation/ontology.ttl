@@ -1,0 +1,469 @@
+@prefix : <https://dt.iot.linkeddata.es/def/digital_twin#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://dt.iot.linkeddata.es/def/digital_twin#> .
+
+<https://dt.iot.linkeddata.es/def/digital_twin#> rdf:type owl:Ontology ;
+                                                  <http://purl.org/dc/elements/1.1/contributor> "Andrea Cimmino" ,
+                                                                                                "María Poveda Villalón" ,
+                                                                                                "Raúl García Castro" ;
+                                                  <http://purl.org/dc/elements/1.1/created> "2024-01-18"^^xsd:date ;
+                                                  <http://purl.org/dc/elements/1.1/creator> "Salvador González Gerpe" ;
+                                                  <http://purl.org/dc/elements/1.1/description> "Digital Twin ontology used to define Digital Twins and Semantic Digital Twins by dimensions."@en ;
+                                                  <http://purl.org/dc/elements/1.1/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                                  <http://purl.org/dc/elements/1.1/title> "The Digital Twin ontology"@en ;
+                                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "dt" ;
+                                                  <http://purl.org/vocab/vann/preferredNamespaceUri> <https://dt.iot.linkeddata.es/def/digital_twin#> ;
+                                                  owl:versionInfo "0.0.2" ;
+                                                  <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty ;
+             rdfs:label "comment" .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#aggregates
+:aggregates rdf:type owl:ObjectProperty ;
+            rdfs:domain :AggregatedDigitalTwin ;
+            rdfs:range :DigitalTwinInstance ;
+            rdfs:comment "Property that describes de action of aggregation between two different entities or dt:DigitalTwin."@en ;
+            rdfs:label "aggregates" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasComponents
+:hasComponents rdf:type owl:ObjectProperty ;
+               rdfs:domain :PhysicalEntity ;
+               rdfs:range :Component ;
+               rdfs:comment "Property that describes the different components that the dt:PhysicalEntitty contains."@en ;
+               rdfs:label "has components" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasConnectionPoints
+:hasConnectionPoints rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Connection ;
+                     rdfs:range :ConnectionPoint ;
+                     rdfs:label "has connection points" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasConnections
+:hasConnections rdf:type owl:ObjectProperty ;
+                rdfs:domain :DigitalTwinConnection ;
+                rdfs:range :Connection ;
+                rdfs:comment "Property that describes the different connections that the dt:DigitalTwinConnections contains."@en ;
+                rdfs:label "has connections" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasData
+:hasData rdf:type owl:ObjectProperty ;
+         rdfs:domain :DigitalTwinData ;
+         rdfs:range <http://www.w3.org/ns/dcat#Resource> ;
+         rdfs:comment "Property that describes the different data that the dt:DigitalTwinData contains."@en ;
+         rdfs:label "has data" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasDigitalTwinConnections
+:hasDigitalTwinConnections rdf:type owl:ObjectProperty ;
+                           rdfs:domain :DigitalTwin ;
+                           rdfs:range :DigitalTwinConnection ;
+                           rdfs:comment "Property that describes the different Digital Twin Connections that the digital twin contains."@en ;
+                           rdfs:label "has digital twin connections" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasDigitalTwinData
+:hasDigitalTwinData rdf:type owl:ObjectProperty ;
+                    rdfs:domain :DigitalTwin ;
+                    rdfs:range :DigitalTwinData ;
+                    rdfs:comment "Property that describes the different Digital Twin Data that the digital twin contains."@en ;
+                    rdfs:label "has digital twin data" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasDigitalTwinServices
+:hasDigitalTwinServices rdf:type owl:ObjectProperty ;
+                        rdfs:domain :DigitalTwin ;
+                        rdfs:range :DigitalTwinService ;
+                        rdfs:label "has digital twin services" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasFormats
+:hasFormats rdf:type owl:ObjectProperty ;
+            rdfs:domain :Model ;
+            rdfs:range :Format ;
+            rdfs:comment "Property that describes the different extension formats that the models or data can be found."@en ;
+            rdfs:label "has formats" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasInteractionAffordance
+:hasInteractionAffordance rdf:type owl:ObjectProperty ;
+                          rdfs:domain :DigitalTwinService ;
+                          rdfs:range <https://www.w3.org/2019/wot/td#InteractionAffordance> ;
+                          rdfs:label "has interaction affordance" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasModels
+:hasModels rdf:type owl:ObjectProperty ;
+           rdfs:domain :VirtualEntity ;
+           rdfs:range :Model ;
+           rdfs:comment "Property that describes the different models that the dt:VirtualEntitty contains."@en ;
+           rdfs:label "has models" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasPhysicalEntities
+:hasPhysicalEntities rdf:type owl:ObjectProperty ;
+                     rdfs:domain :DigitalTwin ;
+                     rdfs:range :PhysicalEntity ;
+                     rdfs:comment "Property that describes the different Physical Entities that the digital twin contains."@en ;
+                     rdfs:label "has physical entities" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasVirtualEntities
+:hasVirtualEntities rdf:type owl:ObjectProperty ;
+                    rdfs:domain :DigitalTwin ;
+                    rdfs:range :VirtualEntity ;
+                    rdfs:comment "Property that describes the different Virtual Entities that the digital twin contains."@en ;
+                    rdfs:label "has virtual entities" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
+                                       rdfs:label "description" .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:label "identifier" .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+                                 rdfs:label "title" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#hasExtension
+:hasExtension rdf:type owl:DatatypeProperty ;
+              rdfs:comment "Extension of the model or data with which can be found."@en ;
+              rdfs:label "has extension" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#isInternal
+:isInternal rdf:type owl:DatatypeProperty ;
+            rdfs:comment "Boolean that indicates if the concept is inside or outside the digital twin."@en ;
+            rdfs:label "is internal" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#isProvider
+:isProvider rdf:type owl:DatatypeProperty ;
+            rdfs:comment "Boolean that indicates if the member of the connection is the one that provides the information or a specific information, or not."@en ;
+            rdfs:label "is provider" .
+
+
+###  https://www.w3.org/2019/wot/hypermedia#hasTarget
+<https://www.w3.org/2019/wot/hypermedia#hasTarget> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:label "has target" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/dcat#Resource
+<http://www.w3.org/ns/dcat#Resource> rdf:type owl:Class ;
+                                     rdfs:subClassOf :ConnectionPoint ;
+                                     rdfs:label "Resource" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#AggregatedDigitalTwin
+:AggregatedDigitalTwin rdf:type owl:Class ;
+                       rdfs:subClassOf :DigitalTwin ;
+                       rdfs:label "Aggregated Digital Twin" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#BehavioralModel
+:BehavioralModel rdf:type owl:Class ;
+                 rdfs:subClassOf :Connection ;
+                 rdfs:comment "Describes the behaviors and response mechanisms of the entity (e.g. state transition, performance and disturbances)"@en ;
+                 rdfs:label "Behavioral Model" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#Component
+:Component rdf:type owl:Class ;
+           rdfs:comment "Subsystem, object or sensory device registered in the Physical Entity dimension."@en ;
+           rdfs:label "Component" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#Connection
+:Connection rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasConnectionPoints ;
+                              owl:cardinality "2"^^xsd:nonNegativeInteger
+                            ] ;
+            rdfs:comment "Existing connection between different dt:DigitalTwinDimension."@en ;
+            rdfs:label "Connection" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#ConnectionPoint
+:ConnectionPoint rdf:type owl:Class ;
+                 rdfs:label "Connection Point" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwin
+:DigitalTwin rdf:type owl:Class ;
+             rdfs:subClassOf <https://www.w3.org/2019/wot/td#Thing> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasDigitalTwinConnections ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasDigitalTwinData ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasDigitalTwinServices ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasPhysicalEntities ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasVirtualEntities ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ;
+             rdfs:comment "A realistic representation of all product life cycle components using physical, virtual and interaction data."@en ;
+             rdfs:label "Digital Twin" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwinAggregate
+:DigitalTwinAggregate rdf:type owl:Class ;
+                      rdfs:comment "Describes the aggregation of all the DTIs. Unlike the DTI, the DTA may not be an independent data structure. It may be a computing construct that has access to all DTIs and queries them either ad-hoc or proactively."@en ;
+                      rdfs:label "Digital Twin Aggregate" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwinConnection
+:DigitalTwinConnection rdf:type owl:Class ;
+                       rdfs:subClassOf :DigitalTwinDimension ;
+                       rdfs:comment "This dimension of the digital twin contains all the existing connections that are between the different dimensions of the digital twins and the information used."@en ;
+                       rdfs:label "Digital Twin Connection" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwinData
+:DigitalTwinData rdf:type owl:Class ;
+                 rdfs:subClassOf :DigitalTwinDimension ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasData ;
+                                   owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                 ] ;
+                 rdfs:comment "This dimension of the digital twin contains all the data used by the digital twin."@en ;
+                 rdfs:label "Digital Twin Data" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwinDimension
+:DigitalTwinDimension rdf:type owl:Class ;
+                      rdfs:comment "Dimensions of which the digital twin is composed."@en ;
+                      rdfs:label "Digital Twin Dimension" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwinInstance
+:DigitalTwinInstance rdf:type owl:Class ;
+                     rdfs:subClassOf :DigitalTwin ;
+                     rdfs:comment "Describes a specific corresponding physical product that an individual Digital Twin remains linked to throughout the life of that physical product."@en ;
+                     rdfs:label "Digital Twin Instance" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwinService
+:DigitalTwinService rdf:type owl:Class ;
+                    rdfs:subClassOf :DigitalTwinDimension ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasInteractionAffordance ;
+                                      owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ;
+                    rdfs:comment "This dimension of the digital twin contains all the services that are used to perform all the processes of the digital twin."@en ;
+                    rdfs:label "Digital Twin Service" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#Format
+:Format rdf:type owl:Class ;
+        rdfs:comment "Extension format in which the model or data is available."@en ;
+        rdfs:label "Format" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#GeometricModel
+:GeometricModel rdf:type owl:Class ;
+                rdfs:subClassOf :Connection ;
+                rdfs:comment "Describes all the geometric parameters of the physical entity (e.g. shapes, sizes and assembly relations)."@en ;
+                rdfs:label "Geometric Model" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#MainComponent
+:MainComponent rdf:type owl:Class ;
+               rdfs:subClassOf :Connection ;
+               rdfs:comment "Main component of the Physical Entity dimension in the case of multiple."@en ;
+               rdfs:label "Main Component" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#MappingModel
+:MappingModel rdf:type owl:Class ;
+              rdfs:subClassOf :SemanticModel ;
+              rdfs:comment "Model that allows the alignment of data with the objective of obtaining harmonised data from non-harmonised data."@en ;
+              rdfs:label "Mapping Model" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#Model
+:Model rdf:type owl:Class ;
+       rdfs:subClassOf :ConnectionPoint ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasFormats ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+       rdfs:comment "Representation or conceptualization of the data registered in the Virtual Entity dimension."@en ;
+       rdfs:label "Model" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#OntologyModel
+:OntologyModel rdf:type owl:Class ;
+               rdfs:subClassOf :SemanticModel ;
+               rdfs:comment "Model that contains the conceptualization of the information of the digital twin. This conceptualization activity refers to the organization and structuration of the information (data, knowledge, etc.), obtained during the acquisition process, into meaningful models at the knowledge level and according to the ontology requirements specification document."@en ;
+               rdfs:label "Ontology Model" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#PhysicalEntity
+:PhysicalEntity rdf:type owl:Class ;
+                rdfs:subClassOf :DigitalTwinDimension ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasComponents ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] ;
+                rdfs:comment "This dimension of the digital twin consists of various subsystems, objects and sensory devices. These subsystems can include dynamic systems, control systems, maintenance systems, etc., and can be combined for a specific task."@en ;
+                rdfs:label "Physical Entity" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#PhysicalModel
+:PhysicalModel rdf:type owl:Class ;
+               rdfs:subClassOf :Connection ;
+               rdfs:comment "Responsible for providing all the physical properties (e.g. speed and force) based on dt:GeometricModel"@en ;
+               rdfs:label "Physical Model" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#RulesModel
+:RulesModel rdf:type owl:Class ;
+            rdfs:subClassOf :Connection ;
+            rdfs:comment "A set of rules extracted from the historical data obtained from the physical model, whose function is to provide the virtual entity with a judgment for decision making, optimization, evaluation, prediction and maintenance."@en ;
+            rdfs:label "Rules Model" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#SHACLModel
+:SHACLModel rdf:type owl:Class ;
+            rdfs:subClassOf :SemanticModel ;
+            rdfs:comment "Model that contains the data validation rules allowing the data to be validated."@en ;
+            rdfs:label "S H A C L Model" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#SemanticModel
+:SemanticModel rdf:type owl:Class ;
+               rdfs:subClassOf :Connection ;
+               rdfs:label "Semantic Model" .
+
+
+###  https://dt.iot.linkeddata.es/def/digital_twin#VirtualEntity
+:VirtualEntity rdf:type owl:Class ;
+               rdfs:subClassOf :DigitalTwinDimension ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasModels ;
+                                 owl:minCardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "This dimension of the digital twin consists of various data models that represents all the information allocated in the digital twin."@en ;
+               rdfs:label "Virtual Entity" .
+
+
+###  https://saref.etsi.org/core/Actuator
+<https://saref.etsi.org/core/Actuator> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://saref.etsi.org/core/Device> ;
+                                       rdfs:label "Actuator" .
+
+
+###  https://saref.etsi.org/core/Device
+<https://saref.etsi.org/core/Device> rdf:type owl:Class ;
+                                     rdfs:subClassOf :Connection ;
+                                     rdfs:label "Device" .
+
+
+###  https://saref.etsi.org/core/Sensor
+<https://saref.etsi.org/core/Sensor> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://saref.etsi.org/core/Device> ;
+                                     rdfs:label "Sensor" .
+
+
+###  https://www.w3.org/2019/wot/td#InteractionAffordance
+<https://www.w3.org/2019/wot/td#InteractionAffordance> rdf:type owl:Class ;
+                                                       rdfs:subClassOf :ConnectionPoint ;
+                                                       rdfs:label "Interaction Affordance" .
+
+
+###  https://www.w3.org/2019/wot/td#Thing
+<https://www.w3.org/2019/wot/td#Thing> rdf:type owl:Class ;
+                                       rdfs:label "Thing" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
