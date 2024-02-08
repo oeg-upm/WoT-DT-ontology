@@ -1,0 +1,33 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "dt:AggregatedDigitalTwin" "dt:ConnectionPoint" "dt:PhysicalEntity" "dt:DigitalTwinData" "dt:DigitalTwinService" "td:InteractionAffordance" "dt:Component" "dt:DigitalTwinConnection" "dt:DigitalTwinInstance" "dt:VirtualEntity" "dcat:Resource" "dt:DigitalTwin" "dt:Format" "dt:Model" "dt:Connection" ; /*classes style*/
+	"dt:" -> "https://creativecommons.org/licenses/by/4.0/" [ label = "dc:license" ];
+	"dt:" -> "dt:" [ label = "vann:preferredNamespaceUri" ];
+	"dt:" -> "https://chowlk.linkeddata.es/" [ label = "mod:createdWith" ];
+	"NULL" -> "dt:hasData" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasDigitalTwinServices" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasPhysicalEntities" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasDigitalTwinData" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasDigitalTwinConnections" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasConnectionPoints" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasInteractionAffordance" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasVirtualEntities" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasComponents" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasModels" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasFormats" [ label = "owl:onProperty" ];
+	"dt:AggregatedDigitalTwin" -> "dt:DigitalTwinInstance" [ label = "dt:aggregates" ];
+	"dt:Model" -> "dt:Format" [ label = "dt:hasFormats" ];
+	"dt:DigitalTwin" -> "dt:DigitalTwinConnection" [ label = "dt:hasDigitalTwinConnections" ];
+	"dt:VirtualEntity" -> "dt:Model" [ label = "dt:hasModels" ];
+	"dt:DigitalTwin" -> "dt:DigitalTwinService" [ label = "dt:hasDigitalTwinServices" ];
+	"dt:Connection" -> "dt:ConnectionPoint" [ label = "dt:hasConnectionPoints" ];
+	"dt:DigitalTwin" -> "dt:DigitalTwinData" [ label = "dt:hasDigitalTwinData" ];
+	"dt:DigitalTwin" -> "dt:VirtualEntity" [ label = "dt:hasVirtualEntities" ];
+	"dt:DigitalTwinService" -> "td:InteractionAffordance" [ label = "dt:hasInteractionAffordance" ];
+	"dt:DigitalTwinConnection" -> "dt:Connection" [ label = "dt:hasConnections" ];
+	"dt:PhysicalEntity" -> "dt:Component" [ label = "dt:hasComponents" ];
+	"dt:DigitalTwinData" -> "dcat:Resource" [ label = "dt:hasData" ];
+	"dt:DigitalTwin" -> "dt:PhysicalEntity" [ label = "dt:hasPhysicalEntities" ];
+
+}

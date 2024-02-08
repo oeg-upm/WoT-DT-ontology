@@ -1,0 +1,197 @@
+{
+  "@context" : {
+    "isInternal" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#isInternal"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/elements/1.1/created"
+    },
+    "MainComponent" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#MainComponent"
+    },
+    "hasExtension" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasExtension"
+    },
+    "DigitalTwinAggregate" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwinAggregate"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/elements/1.1/license"
+    },
+    "DigitalTwinDimension" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwinDimension"
+    },
+    "hasDigitalTwinConnections" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasDigitalTwinConnections",
+      "@type" : "@id"
+    },
+    "SemanticModel" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#SemanticModel"
+    },
+    "Thing" : {
+      "@id" : "https://www.w3.org/2019/wot/td#Thing"
+    },
+    "isProvider" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#isProvider"
+    },
+    "DigitalTwinService" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwinService"
+    },
+    "BehavioralModel" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#BehavioralModel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "DigitalTwin" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwin"
+    },
+    "Format" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#Format"
+    },
+    "DigitalTwinConnection" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwinConnection"
+    },
+    "MappingModel" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#MappingModel"
+    },
+    "hasInteractionAffordance" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasInteractionAffordance",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "OntologyModel" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#OntologyModel"
+    },
+    "hasTarget" : {
+      "@id" : "https://www.w3.org/2019/wot/hypermedia#hasTarget"
+    },
+    "Model" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#Model"
+    },
+    "PhysicalModel" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#PhysicalModel"
+    },
+    "InteractionAffordance" : {
+      "@id" : "https://www.w3.org/2019/wot/td#InteractionAffordance"
+    },
+    "VirtualEntity" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#VirtualEntity"
+    },
+    "DigitalTwinData" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwinData"
+    },
+    "createdWith" : {
+      "@id" : "https://w3id.org/mod#createdWith"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier"
+    },
+    "hasFormats" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasFormats",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "GeometricModel" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#GeometricModel"
+    },
+    "RulesModel" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#RulesModel"
+    },
+    "DigitalTwinInstance" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#DigitalTwinInstance"
+    },
+    "ConnectionPoint" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#ConnectionPoint"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "hasPhysicalEntities" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasPhysicalEntities",
+      "@type" : "@id"
+    },
+    "AggregatedDigitalTwin" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#AggregatedDigitalTwin"
+    },
+    "hasData" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasData",
+      "@type" : "@id"
+    },
+    "hasConnections" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasConnections",
+      "@type" : "@id"
+    },
+    "Connection" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#Connection"
+    },
+    "SHACLModel" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#SHACLModel"
+    },
+    "hasVirtualEntities" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasVirtualEntities",
+      "@type" : "@id"
+    },
+    "Component" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#Component"
+    },
+    "aggregates" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#aggregates",
+      "@type" : "@id"
+    },
+    "Resource" : {
+      "@id" : "http://www.w3.org/ns/dcat#Resource"
+    },
+    "hasComponents" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasComponents",
+      "@type" : "@id"
+    },
+    "Actuator" : {
+      "@id" : "https://saref.etsi.org/core/Actuator"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/elements/1.1/contributor"
+    },
+    "hasDigitalTwinData" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasDigitalTwinData",
+      "@type" : "@id"
+    },
+    "Device" : {
+      "@id" : "https://saref.etsi.org/core/Device"
+    },
+    "PhysicalEntity" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#PhysicalEntity"
+    },
+    "hasModels" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasModels",
+      "@type" : "@id"
+    },
+    "hasDigitalTwinServices" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasDigitalTwinServices",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "hasConnectionPoints" : {
+      "@id" : "https://dt.iot.linkeddata.es/def/digital_twin#hasConnectionPoints",
+      "@type" : "@id"
+    },
+    "Sensor" : {
+      "@id" : "https://saref.etsi.org/core/Sensor"
+    }
+  }
+}
