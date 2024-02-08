@@ -88,10 +88,8 @@ dt:SHACLModel a owl:Class ;
 dt:aggregates a owl:ObjectProperty ;
     rdfs:label "aggregates" ;
     rdfs:comment "Property that describes de action of aggregation between two different entities or dt:DigitalTwin."@en ;
-    rdfs:domain dt:AggregatedDigitalTwin,
-        dt:Model ;
-    rdfs:range dt:DigitalTwinInstance,
-        dt:Model .
+    rdfs:domain dt:AggregatedDigitalTwin ;
+    rdfs:range dt:DigitalTwinInstance .
 
 dt:hasConnections a owl:ObjectProperty ;
     rdfs:label "has connections" ;
@@ -248,6 +246,14 @@ dt:DigitalTwinService a owl:Class ;
             owl:onProperty dt:hasInteractionAffordance ],
         dt:DigitalTwinDimension .
 
+dt:Model a owl:Class ;
+    rdfs:label "Model" ;
+    rdfs:comment "Representation or conceptualization of the data registered in the Virtual Entity dimension."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dt:hasFormats ],
+        dt:ConnectionPoint .
+
 dt:PhysicalEntity a owl:Class ;
     rdfs:label "Physical Entity" ;
     rdfs:comment "This dimension of the digital twin consists of various subsystems, objects and sensory devices. These subsystems can include dynamic systems, control systems, maintenance systems, etc., and can be combined for a specific task."@en ;
@@ -274,14 +280,6 @@ dt:SemanticModel a owl:Class ;
 
 dt:ConnectionPoint a owl:Class ;
     rdfs:label "Connection Point" .
-
-dt:Model a owl:Class ;
-    rdfs:label "Model" ;
-    rdfs:comment "Representation or conceptualization of the data registered in the Virtual Entity dimension."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty dt:hasFormats ],
-        dt:ConnectionPoint .
 
 dt:DigitalTwinDimension a owl:Class ;
     rdfs:label "Digital Twin Dimension" ;
