@@ -94,10 +94,7 @@ dt:SHACLModel a owl:Class ;
 
 dt:aggregate a owl:ObjectProperty ;
     rdfs:label "aggregate" ;
-    rdfs:comment "Property that describes de action of aggregation between two different entities or dt:DigitalTwin."@en .
-
-dt:aggregates a owl:ObjectProperty ;
-    rdfs:label "aggregates" ;
+    rdfs:comment "Property that describes de action of aggregation between two different entities or dt:DigitalTwin."@en ;
     rdfs:domain dt:AggregatedDigitalTwin ;
     rdfs:range dt:DigitalTwinInstance .
 
