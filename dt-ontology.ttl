@@ -92,40 +92,23 @@ dt:SHACLModel a owl:Class ;
     rdfs:comment "Model that contains the data validation rules allowing the data to be validated."@en ;
     rdfs:subClassOf dt:SemanticModel .
 
+dt:aggregate a owl:ObjectProperty ;
+    rdfs:label "aggregate" ;
+    rdfs:comment "Property that describes de action of aggregation between two different entities or dt:DigitalTwin."@en .
+
 dt:aggregates a owl:ObjectProperty ;
     rdfs:label "aggregates" ;
-    rdfs:comment "Property that describes de action of aggregation between two different entities or dt:DigitalTwin."@en ;
     rdfs:domain dt:AggregatedDigitalTwin ;
     rdfs:range dt:DigitalTwinInstance .
-
-dt:hasComponents a owl:ObjectProperty ;
-    rdfs:label "has components" ;
-    rdfs:comment "Property that describes the different components that the dt:PhysicalEntitty contains."@en .
-
-dt:hasConnections a owl:ObjectProperty ;
-    rdfs:label "has connections" ;
-    rdfs:comment "Property that describes the different connections that the dt:DigitalTwinConnections contains."@en .
-
-dt:hasDigitalTwinConnections a owl:ObjectProperty ;
-    rdfs:label "has digital twin connections" ;
-    rdfs:comment "Property that describes the different Digital Twin Connections that the digital twin contains."@en .
 
 dt:hasExtension a owl:DatatypeProperty ;
     rdfs:label "has extension" ;
     rdfs:comment "Extension of the model or data with which can be found."@en ;
     rdfs:range xsd:string .
 
-dt:hasModels a owl:ObjectProperty ;
-    rdfs:label "has models" ;
-    rdfs:comment "Property that describes the different models that the dt:VirtualEntitty contains."@en .
-
-dt:hasPhysicalEntities a owl:ObjectProperty ;
-    rdfs:label "has physical entities" ;
-    rdfs:comment "Property that describes the different Physical Entities that the digital twin contains."@en .
-
-dt:hasVirtualEntities a owl:ObjectProperty ;
-    rdfs:label "has virtual entities" ;
-    rdfs:comment "Property that describes the different Virtual Entities that the digital twin contains."@en .
+dt:hasFormat a owl:ObjectProperty ;
+    rdfs:label "has format" ;
+    rdfs:comment "Property that describes the different extension formats that the models or data can be found."@en .
 
 dt:isInternal a owl:DatatypeProperty ;
     rdfs:label "is internal" ;
@@ -181,11 +164,13 @@ dt:Format a owl:Class ;
 
 dt:hasComponent a owl:ObjectProperty ;
     rdfs:label "has component" ;
+    rdfs:comment "Property that describes the different components that the dt:PhysicalEntitty contains."@en ;
     rdfs:domain dt:PhysicalEntity ;
     rdfs:range dt:Component .
 
 dt:hasConnection a owl:ObjectProperty ;
     rdfs:label "has connection" ;
+    rdfs:comment "Property that describes the different connections that the dt:DigitalTwinConnections contains."@en ;
     rdfs:domain dt:DigitalTwinConnection ;
     rdfs:range dt:Connection .
 
@@ -202,6 +187,7 @@ dt:hasData a owl:ObjectProperty ;
 
 dt:hasDigitalTwinConnection a owl:ObjectProperty ;
     rdfs:label "has digital twin connection" ;
+    rdfs:comment "Property that describes the different Digital Twin Connections that the digital twin contains."@en ;
     rdfs:domain dt:DigitalTwin ;
     rdfs:range dt:DigitalTwinConnection .
 
@@ -218,7 +204,6 @@ dt:hasDigitalTwinService a owl:ObjectProperty ;
 
 dt:hasFormats a owl:ObjectProperty ;
     rdfs:label "has formats" ;
-    rdfs:comment "Property that describes the different extension formats that the models or data can be found."@en ;
     rdfs:domain dt:Model ;
     rdfs:range dt:Format .
 
@@ -229,16 +214,19 @@ dt:hasInteractionAffordance a owl:ObjectProperty ;
 
 dt:hasModel a owl:ObjectProperty ;
     rdfs:label "has model" ;
+    rdfs:comment "Property that describes the different models that the dt:VirtualEntitty contains."@en ;
     rdfs:domain dt:VirtualEntity ;
     rdfs:range dt:Model .
 
 dt:hasPhysicalEntity a owl:ObjectProperty ;
     rdfs:label "has physical entity" ;
+    rdfs:comment "Property that describes the different Physical Entities that the digital twin contains."@en ;
     rdfs:domain dt:DigitalTwin ;
     rdfs:range dt:PhysicalEntity .
 
 dt:hasVirtualEntity a owl:ObjectProperty ;
     rdfs:label "has virtual entity" ;
+    rdfs:comment "Property that describes the different Virtual Entities that the digital twin contains."@en ;
     rdfs:domain dt:DigitalTwin ;
     rdfs:range dt:VirtualEntity .
 
