@@ -7,8 +7,8 @@ node [shape = rectangle, color="orange"]; "dt:Component" "dt:Connection" "dt:Agg
 	"NULL" -> "dt:hasConnectionPoint" [ label = "owl:onProperty" ];
 	"NULL" -> "dt:hasVirtualEntity" [ label = "owl:onProperty" ];
 	"NULL" -> "dt:hasFormats" [ label = "owl:onProperty" ];
-	"NULL" -> "dt:hasDigitalTwinConnection" [ label = "owl:onProperty" ];
 	"NULL" -> "dt:hasDigitalTwinService" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasDigitalTwinConnection" [ label = "owl:onProperty" ];
 	"NULL" -> "dt:hasPhysicalEntity" [ label = "owl:onProperty" ];
 	"NULL" -> "dt:hasData" [ label = "owl:onProperty" ];
 	"NULL" -> "dt:hasDigitalTwinData" [ label = "owl:onProperty" ];
