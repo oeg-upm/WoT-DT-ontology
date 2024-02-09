@@ -42,6 +42,9 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 rdfs:comment a owl:AnnotationProperty ;
     rdfs:label "comment" .
 
+rdfs:label a owl:AnnotationProperty ;
+    rdfs:label "label" .
+
 owl:versionInfo a owl:AnnotationProperty .
 
 saref:Actuator a owl:Class ;
@@ -88,7 +91,8 @@ dt:RulesModel a owl:Class ;
     rdfs:subClassOf dt:Model .
 
 dt:SHACLModel a owl:Class ;
-    rdfs:label "S H A C L Model" ;
+    rdfs:label "S H A C L Model",
+        "SHACL Model"@en ;
     rdfs:comment "Model that contains the data validation rules allowing the data to be validated."@en ;
     rdfs:subClassOf dt:SemanticModel .
 
@@ -102,10 +106,6 @@ dt:hasExtension a owl:DatatypeProperty ;
     rdfs:label "has extension" ;
     rdfs:comment "Extension of the model or data with which can be found."@en ;
     rdfs:range xsd:string .
-
-dt:hasFormat a owl:ObjectProperty ;
-    rdfs:label "has format" ;
-    rdfs:comment "Property that describes the different extension formats that the models or data can be found."@en .
 
 dt:isInternal a owl:DatatypeProperty ;
     rdfs:label "is internal" ;
@@ -199,8 +199,9 @@ dt:hasDigitalTwinService a owl:ObjectProperty ;
     rdfs:domain dt:DigitalTwin ;
     rdfs:range dt:DigitalTwinService .
 
-dt:hasFormats a owl:ObjectProperty ;
-    rdfs:label "has formats" ;
+dt:hasFormat a owl:ObjectProperty ;
+    rdfs:label "has format" ;
+    rdfs:comment "Property that describes the different extension formats that the models or data can be found."@en ;
     rdfs:domain dt:Model ;
     rdfs:range dt:Format .
 
@@ -325,6 +326,6 @@ dt:Model a owl:Class ;
     rdfs:comment "Representation or conceptualization of the data registered in the Virtual Entity dimension."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty dt:hasFormats ],
+            owl:onProperty dt:hasFormat ],
         dt:ConnectionPoint .
 
