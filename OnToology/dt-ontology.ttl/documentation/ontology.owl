@@ -148,13 +148,22 @@
     
 
 
+    <!-- https://w3id.org/def/digitaltwin#aggregate -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#aggregate">
+        <rdfs:comment xml:lang="en">Property that describes de action of aggregation between two different entities or dt:DigitalTwin.</rdfs:comment>
+        <rdfs:label>aggregate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/digitaltwin#aggregates -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#aggregates">
         <rdfs:domain rdf:resource="https://w3id.org/def/digitaltwin#AggregatedDigitalTwin"/>
         <rdfs:range rdf:resource="https://w3id.org/def/digitaltwin#DigitalTwinInstance"/>
-        <rdfs:comment xml:lang="en">Property that describes de action of aggregation between two different entities or dt:DigitalTwin.</rdfs:comment>
         <rdfs:label>aggregates</rdfs:label>
     </owl:ObjectProperty>
     
@@ -166,17 +175,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasComponent">
         <rdfs:domain rdf:resource="https://w3id.org/def/digitaltwin#PhysicalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/def/digitaltwin#Component"/>
-        <rdfs:label>has component</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/def/digitaltwin#hasComponents -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasComponents">
         <rdfs:comment xml:lang="en">Property that describes the different components that the dt:PhysicalEntitty contains.</rdfs:comment>
-        <rdfs:label>has components</rdfs:label>
+        <rdfs:label>has component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -187,6 +187,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasConnection">
         <rdfs:domain rdf:resource="https://w3id.org/def/digitaltwin#DigitalTwinConnection"/>
         <rdfs:range rdf:resource="https://w3id.org/def/digitaltwin#Connection"/>
+        <rdfs:comment xml:lang="en">Property that describes the different connections that the dt:DigitalTwinConnections contains.</rdfs:comment>
         <rdfs:label>has connection</rdfs:label>
     </owl:ObjectProperty>
     
@@ -199,16 +200,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/def/digitaltwin#Connection"/>
         <rdfs:range rdf:resource="https://w3id.org/def/digitaltwin#ConnectionPoint"/>
         <rdfs:label>has connection point</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/def/digitaltwin#hasConnections -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasConnections">
-        <rdfs:comment xml:lang="en">Property that describes the different connections that the dt:DigitalTwinConnections contains.</rdfs:comment>
-        <rdfs:label>has connections</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -231,17 +222,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasDigitalTwinConnection">
         <rdfs:domain rdf:resource="https://w3id.org/def/digitaltwin#DigitalTwin"/>
         <rdfs:range rdf:resource="https://w3id.org/def/digitaltwin#DigitalTwinConnection"/>
-        <rdfs:label>has digital twin connection</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/def/digitaltwin#hasDigitalTwinConnections -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasDigitalTwinConnections">
         <rdfs:comment xml:lang="en">Property that describes the different Digital Twin Connections that the digital twin contains.</rdfs:comment>
-        <rdfs:label>has digital twin connections</rdfs:label>
+        <rdfs:label>has digital twin connection</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -269,13 +251,22 @@
     
 
 
+    <!-- https://w3id.org/def/digitaltwin#hasFormat -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasFormat">
+        <rdfs:comment xml:lang="en">Property that describes the different extension formats that the models or data can be found.</rdfs:comment>
+        <rdfs:label>has format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/digitaltwin#hasFormats -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasFormats">
         <rdfs:domain rdf:resource="https://w3id.org/def/digitaltwin#Model"/>
         <rdfs:range rdf:resource="https://w3id.org/def/digitaltwin#Format"/>
-        <rdfs:comment xml:lang="en">Property that describes the different extension formats that the models or data can be found.</rdfs:comment>
         <rdfs:label>has formats</rdfs:label>
     </owl:ObjectProperty>
     
@@ -298,27 +289,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasModel">
         <rdfs:domain rdf:resource="https://w3id.org/def/digitaltwin#VirtualEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/def/digitaltwin#Model"/>
-        <rdfs:label>has model</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/def/digitaltwin#hasModels -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasModels">
         <rdfs:comment xml:lang="en">Property that describes the different models that the dt:VirtualEntitty contains.</rdfs:comment>
-        <rdfs:label>has models</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/def/digitaltwin#hasPhysicalEntities -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasPhysicalEntities">
-        <rdfs:comment xml:lang="en">Property that describes the different Physical Entities that the digital twin contains.</rdfs:comment>
-        <rdfs:label>has physical entities</rdfs:label>
+        <rdfs:label>has model</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -329,17 +301,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasPhysicalEntity">
         <rdfs:domain rdf:resource="https://w3id.org/def/digitaltwin#DigitalTwin"/>
         <rdfs:range rdf:resource="https://w3id.org/def/digitaltwin#PhysicalEntity"/>
+        <rdfs:comment xml:lang="en">Property that describes the different Physical Entities that the digital twin contains.</rdfs:comment>
         <rdfs:label>has physical entity</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/def/digitaltwin#hasVirtualEntities -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasVirtualEntities">
-        <rdfs:comment xml:lang="en">Property that describes the different Virtual Entities that the digital twin contains.</rdfs:comment>
-        <rdfs:label>has virtual entities</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -350,6 +313,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/def/digitaltwin#hasVirtualEntity">
         <rdfs:domain rdf:resource="https://w3id.org/def/digitaltwin#DigitalTwin"/>
         <rdfs:range rdf:resource="https://w3id.org/def/digitaltwin#VirtualEntity"/>
+        <rdfs:comment xml:lang="en">Property that describes the different Virtual Entities that the digital twin contains.</rdfs:comment>
         <rdfs:label>has virtual entity</rdfs:label>
     </owl:ObjectProperty>
     

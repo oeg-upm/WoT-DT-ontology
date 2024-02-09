@@ -31,10 +31,6 @@
     "DigitalTwinDimension" : {
       "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinDimension"
     },
-    "hasDigitalTwinConnections" : {
-      "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinConnections",
-      "@type" : "@id"
-    },
     "SemanticModel" : {
       "@id" : "https://w3id.org/def/digitaltwin#SemanticModel"
     },
@@ -90,6 +86,10 @@
     "PhysicalModel" : {
       "@id" : "https://w3id.org/def/digitaltwin#PhysicalModel"
     },
+    "aggregate" : {
+      "@id" : "https://w3id.org/def/digitaltwin#aggregate",
+      "@type" : "@id"
+    },
     "InteractionAffordance" : {
       "@id" : "https://www.w3.org/2019/wot/td#InteractionAffordance"
     },
@@ -144,10 +144,6 @@
       "@id" : "http://purl.org/dc/terms/title",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "hasPhysicalEntities" : {
-      "@id" : "https://w3id.org/def/digitaltwin#hasPhysicalEntities",
-      "@type" : "@id"
-    },
     "AggregatedDigitalTwin" : {
       "@id" : "https://w3id.org/def/digitaltwin#AggregatedDigitalTwin"
     },
@@ -155,19 +151,11 @@
       "@id" : "https://w3id.org/def/digitaltwin#hasData",
       "@type" : "@id"
     },
-    "hasConnections" : {
-      "@id" : "https://w3id.org/def/digitaltwin#hasConnections",
-      "@type" : "@id"
-    },
     "Connection" : {
       "@id" : "https://w3id.org/def/digitaltwin#Connection"
     },
     "SHACLModel" : {
       "@id" : "https://w3id.org/def/digitaltwin#SHACLModel"
-    },
-    "hasVirtualEntities" : {
-      "@id" : "https://w3id.org/def/digitaltwin#hasVirtualEntities",
-      "@type" : "@id"
     },
     "Component" : {
       "@id" : "https://w3id.org/def/digitaltwin#Component"
@@ -182,10 +170,6 @@
     },
     "Resource" : {
       "@id" : "http://www.w3.org/ns/dcat#Resource"
-    },
-    "hasComponents" : {
-      "@id" : "https://w3id.org/def/digitaltwin#hasComponents",
-      "@type" : "@id"
     },
     "hasUriTemplateSchema" : {
       "@id" : "https://www.w3.org/2019/wot/td#hasUriTemplateSchema"
@@ -210,12 +194,12 @@
     "Device" : {
       "@id" : "https://saref.etsi.org/core/Device"
     },
+    "hasFormat" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasFormat",
+      "@type" : "@id"
+    },
     "PhysicalEntity" : {
       "@id" : "https://w3id.org/def/digitaltwin#PhysicalEntity"
-    },
-    "hasModels" : {
-      "@id" : "https://w3id.org/def/digitaltwin#hasModels",
-      "@type" : "@id"
     },
     "description" : {
       "@id" : "http://purl.org/dc/terms/description",

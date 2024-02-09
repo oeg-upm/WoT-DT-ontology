@@ -768,13 +768,13 @@ This section provides details for each class and property defined by The Digital
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#aggregate" title="https://w3id.org/def/digitaltwin#aggregate">aggregate</a>
+      </li>
+      <li>
          <a href="#aggregates" title="https://w3id.org/def/digitaltwin#aggregates">aggregates</a>
       </li>
       <li>
          <a href="#hasComponent" title="https://w3id.org/def/digitaltwin#hasComponent">has component</a>
-      </li>
-      <li>
-         <a href="#hasComponents" title="https://w3id.org/def/digitaltwin#hasComponents">has components</a>
       </li>
       <li>
          <a href="#hasConnection" title="https://w3id.org/def/digitaltwin#hasConnection">has connection</a>
@@ -784,18 +784,11 @@ This section provides details for each class and property defined by The Digital
             title="https://w3id.org/def/digitaltwin#hasConnectionPoint">has connection point</a>
       </li>
       <li>
-         <a href="#hasConnections" title="https://w3id.org/def/digitaltwin#hasConnections">has connections</a>
-      </li>
-      <li>
          <a href="#hasData" title="https://w3id.org/def/digitaltwin#hasData">has data</a>
       </li>
       <li>
          <a href="#hasDigitalTwinConnection"
             title="https://w3id.org/def/digitaltwin#hasDigitalTwinConnection">has digital twin connection</a>
-      </li>
-      <li>
-         <a href="#hasDigitalTwinConnections"
-            title="https://w3id.org/def/digitaltwin#hasDigitalTwinConnections">has digital twin connections</a>
       </li>
       <li>
          <a href="#hasDigitalTwinData"
@@ -804,6 +797,9 @@ This section provides details for each class and property defined by The Digital
       <li>
          <a href="#hasDigitalTwinService"
             title="https://w3id.org/def/digitaltwin#hasDigitalTwinService">has digital twin service</a>
+      </li>
+      <li>
+         <a href="#hasFormat" title="https://w3id.org/def/digitaltwin#hasFormat">has format</a>
       </li>
       <li>
          <a href="#hasFormats" title="https://w3id.org/def/digitaltwin#hasFormats">has formats</a>
@@ -816,25 +812,25 @@ This section provides details for each class and property defined by The Digital
          <a href="#hasModel" title="https://w3id.org/def/digitaltwin#hasModel">has model</a>
       </li>
       <li>
-         <a href="#hasModels" title="https://w3id.org/def/digitaltwin#hasModels">has models</a>
-      </li>
-      <li>
-         <a href="#hasPhysicalEntities"
-            title="https://w3id.org/def/digitaltwin#hasPhysicalEntities">has physical entities</a>
-      </li>
-      <li>
          <a href="#hasPhysicalEntity"
             title="https://w3id.org/def/digitaltwin#hasPhysicalEntity">has physical entity</a>
-      </li>
-      <li>
-         <a href="#hasVirtualEntities"
-            title="https://w3id.org/def/digitaltwin#hasVirtualEntities">has virtual entities</a>
       </li>
       <li>
          <a href="#hasVirtualEntity"
             title="https://w3id.org/def/digitaltwin#hasVirtualEntity">has virtual entity</a>
       </li>
    </ul>
+   <div class="entity" id="aggregate">
+      <h3>aggregate<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#aggregate</p>
+      <div class="comment">
+         <span class="markdown">Property that describes de action of aggregation between two different entities or dt:DigitalTwin.</span>
+      </div>
+   </div>
    <div class="entity" id="aggregates">
       <h3>aggregates<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -842,9 +838,6 @@ This section provides details for each class and property defined by The Digital
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/digitaltwin#aggregates</p>
-      <div class="comment">
-         <span class="markdown">Property that describes de action of aggregation between two different entities or dt:DigitalTwin.</span>
-      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -869,6 +862,9 @@ This section provides details for each class and property defined by The Digital
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasComponent</p>
+      <div class="comment">
+         <span class="markdown">Property that describes the different components that the dt:PhysicalEntitty contains.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -884,17 +880,6 @@ This section provides details for each class and property defined by The Digital
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasComponents">
-      <h3>has components<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasComponents</p>
-      <div class="comment">
-         <span class="markdown">Property that describes the different components that the dt:PhysicalEntitty contains.</span>
-      </div>
-   </div>
    <div class="entity" id="hasConnection">
       <h3>has connection<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -902,6 +887,9 @@ This section provides details for each class and property defined by The Digital
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasConnection</p>
+      <div class="comment">
+         <span class="markdown">Property that describes the different connections that the dt:DigitalTwinConnections contains.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -940,17 +928,6 @@ This section provides details for each class and property defined by The Digital
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasConnections">
-      <h3>has connections<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasConnections</p>
-      <div class="comment">
-         <span class="markdown">Property that describes the different connections that the dt:DigitalTwinConnections contains.</span>
-      </div>
-   </div>
    <div class="entity" id="hasData">
       <h3>has data<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -983,6 +960,9 @@ This section provides details for each class and property defined by The Digital
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasDigitalTwinConnection</p>
+      <div class="comment">
+         <span class="markdown">Property that describes the different Digital Twin Connections that the digital twin contains.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -997,17 +977,6 @@ This section provides details for each class and property defined by The Digital
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasDigitalTwinConnections">
-      <h3>has digital twin connections<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasDigitalTwinConnections</p>
-      <div class="comment">
-         <span class="markdown">Property that describes the different Digital Twin Connections that the digital twin contains.</span>
       </div>
    </div>
    <div class="entity" id="hasDigitalTwinData">
@@ -1058,6 +1027,17 @@ This section provides details for each class and property defined by The Digital
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasFormat">
+      <h3>has format<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasFormat</p>
+      <div class="comment">
+         <span class="markdown">Property that describes the different extension formats that the models or data can be found.</span>
+      </div>
+   </div>
    <div class="entity" id="hasFormats">
       <h3>has formats<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1065,9 +1045,6 @@ This section provides details for each class and property defined by The Digital
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasFormats</p>
-      <div class="comment">
-         <span class="markdown">Property that describes the different extension formats that the models or data can be found.</span>
-      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -1114,6 +1091,9 @@ This section provides details for each class and property defined by The Digital
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasModel</p>
+      <div class="comment">
+         <span class="markdown">Property that describes the different models that the dt:VirtualEntitty contains.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -1129,28 +1109,6 @@ This section provides details for each class and property defined by The Digital
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasModels">
-      <h3>has models<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasModels</p>
-      <div class="comment">
-         <span class="markdown">Property that describes the different models that the dt:VirtualEntitty contains.</span>
-      </div>
-   </div>
-   <div class="entity" id="hasPhysicalEntities">
-      <h3>has physical entities<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasPhysicalEntities</p>
-      <div class="comment">
-         <span class="markdown">Property that describes the different Physical Entities that the digital twin contains.</span>
-      </div>
-   </div>
    <div class="entity" id="hasPhysicalEntity">
       <h3>has physical entity<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1158,6 +1116,9 @@ This section provides details for each class and property defined by The Digital
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasPhysicalEntity</p>
+      <div class="comment">
+         <span class="markdown">Property that describes the different Physical Entities that the digital twin contains.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -1173,17 +1134,6 @@ This section provides details for each class and property defined by The Digital
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasVirtualEntities">
-      <h3>has virtual entities<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasVirtualEntities</p>
-      <div class="comment">
-         <span class="markdown">Property that describes the different Virtual Entities that the digital twin contains.</span>
-      </div>
-   </div>
    <div class="entity" id="hasVirtualEntity">
       <h3>has virtual entity<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1191,6 +1141,9 @@ This section provides details for each class and property defined by The Digital
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasVirtualEntity</p>
+      <div class="comment">
+         <span class="markdown">Property that describes the different Virtual Entities that the digital twin contains.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
