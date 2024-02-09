@@ -559,12 +559,18 @@
     "@id" : "_:genid12"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/digitaltwin#aggregates",
+  "@id" : "https://w3id.org/def/digitaltwin#aggregate",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property that describes de action of aggregation between two different entities or dt:DigitalTwin."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "aggregate"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/digitaltwin#aggregates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#AggregatedDigitalTwin"
   } ],
@@ -577,6 +583,10 @@
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#hasComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that describes the different components that the dt:PhysicalEntitty contains."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#PhysicalEntity"
   } ],
@@ -587,18 +597,12 @@
     "@id" : "https://w3id.org/def/digitaltwin#Component"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/digitaltwin#hasComponents",
+  "@id" : "https://w3id.org/def/digitaltwin#hasConnection",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property that describes the different components that the dt:PhysicalEntitty contains."
+    "@value" : "Property that describes the different connections that the dt:DigitalTwinConnections contains."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has components"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/digitaltwin#hasConnection",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinConnection"
   } ],
@@ -621,16 +625,6 @@
     "@id" : "https://w3id.org/def/digitaltwin#ConnectionPoint"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/digitaltwin#hasConnections",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property that describes the different connections that the dt:DigitalTwinConnections contains."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has connections"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/digitaltwin#hasData",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -649,6 +643,10 @@
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinConnection",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that describes the different Digital Twin Connections that the digital twin contains."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#DigitalTwin"
   } ],
@@ -657,16 +655,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinConnection"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinConnections",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property that describes the different Digital Twin Connections that the digital twin contains."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has digital twin connections"
   } ]
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinData",
@@ -710,12 +698,18 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/digitaltwin#hasFormats",
+  "@id" : "https://w3id.org/def/digitaltwin#hasFormat",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property that describes the different extension formats that the models or data can be found."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has format"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/digitaltwin#hasFormats",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#Model"
   } ],
@@ -740,6 +734,10 @@
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#hasModel",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that describes the different models that the dt:VirtualEntitty contains."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#VirtualEntity"
   } ],
@@ -750,28 +748,12 @@
     "@id" : "https://w3id.org/def/digitaltwin#Model"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/digitaltwin#hasModels",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property that describes the different models that the dt:VirtualEntitty contains."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has models"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/digitaltwin#hasPhysicalEntities",
+  "@id" : "https://w3id.org/def/digitaltwin#hasPhysicalEntity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property that describes the different Physical Entities that the digital twin contains."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has physical entities"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/digitaltwin#hasPhysicalEntity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#DigitalTwin"
   } ],
@@ -782,18 +764,12 @@
     "@id" : "https://w3id.org/def/digitaltwin#PhysicalEntity"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/digitaltwin#hasVirtualEntities",
+  "@id" : "https://w3id.org/def/digitaltwin#hasVirtualEntity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property that describes the different Virtual Entities that the digital twin contains."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has virtual entities"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/digitaltwin#hasVirtualEntity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#DigitalTwin"
   } ],

@@ -81,11 +81,16 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/def/digitaltwin#aggregate
+:aggregate rdf:type owl:ObjectProperty ;
+           rdfs:comment "Property that describes de action of aggregation between two different entities or dt:DigitalTwin."@en ;
+           rdfs:label "aggregate" .
+
+
 ###  https://w3id.org/def/digitaltwin#aggregates
 :aggregates rdf:type owl:ObjectProperty ;
             rdfs:domain :AggregatedDigitalTwin ;
             rdfs:range :DigitalTwinInstance ;
-            rdfs:comment "Property that describes de action of aggregation between two different entities or dt:DigitalTwin."@en ;
             rdfs:label "aggregates" .
 
 
@@ -93,19 +98,15 @@ xsd:date rdf:type rdfs:Datatype .
 :hasComponent rdf:type owl:ObjectProperty ;
               rdfs:domain :PhysicalEntity ;
               rdfs:range :Component ;
+              rdfs:comment "Property that describes the different components that the dt:PhysicalEntitty contains."@en ;
               rdfs:label "has component" .
-
-
-###  https://w3id.org/def/digitaltwin#hasComponents
-:hasComponents rdf:type owl:ObjectProperty ;
-               rdfs:comment "Property that describes the different components that the dt:PhysicalEntitty contains."@en ;
-               rdfs:label "has components" .
 
 
 ###  https://w3id.org/def/digitaltwin#hasConnection
 :hasConnection rdf:type owl:ObjectProperty ;
                rdfs:domain :DigitalTwinConnection ;
                rdfs:range :Connection ;
+               rdfs:comment "Property that describes the different connections that the dt:DigitalTwinConnections contains."@en ;
                rdfs:label "has connection" .
 
 
@@ -114,12 +115,6 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:domain :Connection ;
                     rdfs:range :ConnectionPoint ;
                     rdfs:label "has connection point" .
-
-
-###  https://w3id.org/def/digitaltwin#hasConnections
-:hasConnections rdf:type owl:ObjectProperty ;
-                rdfs:comment "Property that describes the different connections that the dt:DigitalTwinConnections contains."@en ;
-                rdfs:label "has connections" .
 
 
 ###  https://w3id.org/def/digitaltwin#hasData
@@ -134,13 +129,8 @@ xsd:date rdf:type rdfs:Datatype .
 :hasDigitalTwinConnection rdf:type owl:ObjectProperty ;
                           rdfs:domain :DigitalTwin ;
                           rdfs:range :DigitalTwinConnection ;
+                          rdfs:comment "Property that describes the different Digital Twin Connections that the digital twin contains."@en ;
                           rdfs:label "has digital twin connection" .
-
-
-###  https://w3id.org/def/digitaltwin#hasDigitalTwinConnections
-:hasDigitalTwinConnections rdf:type owl:ObjectProperty ;
-                           rdfs:comment "Property that describes the different Digital Twin Connections that the digital twin contains."@en ;
-                           rdfs:label "has digital twin connections" .
 
 
 ###  https://w3id.org/def/digitaltwin#hasDigitalTwinData
@@ -158,11 +148,16 @@ xsd:date rdf:type rdfs:Datatype .
                        rdfs:label "has digital twin service" .
 
 
+###  https://w3id.org/def/digitaltwin#hasFormat
+:hasFormat rdf:type owl:ObjectProperty ;
+           rdfs:comment "Property that describes the different extension formats that the models or data can be found."@en ;
+           rdfs:label "has format" .
+
+
 ###  https://w3id.org/def/digitaltwin#hasFormats
 :hasFormats rdf:type owl:ObjectProperty ;
             rdfs:domain :Model ;
             rdfs:range :Format ;
-            rdfs:comment "Property that describes the different extension formats that the models or data can be found."@en ;
             rdfs:label "has formats" .
 
 
@@ -177,38 +172,23 @@ xsd:date rdf:type rdfs:Datatype .
 :hasModel rdf:type owl:ObjectProperty ;
           rdfs:domain :VirtualEntity ;
           rdfs:range :Model ;
+          rdfs:comment "Property that describes the different models that the dt:VirtualEntitty contains."@en ;
           rdfs:label "has model" .
-
-
-###  https://w3id.org/def/digitaltwin#hasModels
-:hasModels rdf:type owl:ObjectProperty ;
-           rdfs:comment "Property that describes the different models that the dt:VirtualEntitty contains."@en ;
-           rdfs:label "has models" .
-
-
-###  https://w3id.org/def/digitaltwin#hasPhysicalEntities
-:hasPhysicalEntities rdf:type owl:ObjectProperty ;
-                     rdfs:comment "Property that describes the different Physical Entities that the digital twin contains."@en ;
-                     rdfs:label "has physical entities" .
 
 
 ###  https://w3id.org/def/digitaltwin#hasPhysicalEntity
 :hasPhysicalEntity rdf:type owl:ObjectProperty ;
                    rdfs:domain :DigitalTwin ;
                    rdfs:range :PhysicalEntity ;
+                   rdfs:comment "Property that describes the different Physical Entities that the digital twin contains."@en ;
                    rdfs:label "has physical entity" .
-
-
-###  https://w3id.org/def/digitaltwin#hasVirtualEntities
-:hasVirtualEntities rdf:type owl:ObjectProperty ;
-                    rdfs:comment "Property that describes the different Virtual Entities that the digital twin contains."@en ;
-                    rdfs:label "has virtual entities" .
 
 
 ###  https://w3id.org/def/digitaltwin#hasVirtualEntity
 :hasVirtualEntity rdf:type owl:ObjectProperty ;
                   rdfs:domain :DigitalTwin ;
                   rdfs:range :VirtualEntity ;
+                  rdfs:comment "Property that describes the different Virtual Entities that the digital twin contains."@en ;
                   rdfs:label "has virtual entity" .
 
 

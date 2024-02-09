@@ -75,28 +75,29 @@
 # #################################################################
 # 
 # 
+# https://w3id.org/def/digitaltwin#aggregate
+<https://w3id.org/def/digitaltwin#aggregate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/digitaltwin#aggregate> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes de action of aggregation between two different entities or dt:DigitalTwin."@en .
+<https://w3id.org/def/digitaltwin#aggregate> <http://www.w3.org/2000/01/rdf-schema#label> "aggregate" .
+# 
 # https://w3id.org/def/digitaltwin#aggregates
 <https://w3id.org/def/digitaltwin#aggregates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/digitaltwin#aggregates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/digitaltwin#AggregatedDigitalTwin> .
 <https://w3id.org/def/digitaltwin#aggregates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/digitaltwin#DigitalTwinInstance> .
-<https://w3id.org/def/digitaltwin#aggregates> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes de action of aggregation between two different entities or dt:DigitalTwin."@en .
 <https://w3id.org/def/digitaltwin#aggregates> <http://www.w3.org/2000/01/rdf-schema#label> "aggregates" .
 # 
 # https://w3id.org/def/digitaltwin#hasComponent
 <https://w3id.org/def/digitaltwin#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/digitaltwin#hasComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/digitaltwin#PhysicalEntity> .
 <https://w3id.org/def/digitaltwin#hasComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/digitaltwin#Component> .
+<https://w3id.org/def/digitaltwin#hasComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different components that the dt:PhysicalEntitty contains."@en .
 <https://w3id.org/def/digitaltwin#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has component" .
-# 
-# https://w3id.org/def/digitaltwin#hasComponents
-<https://w3id.org/def/digitaltwin#hasComponents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/digitaltwin#hasComponents> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different components that the dt:PhysicalEntitty contains."@en .
-<https://w3id.org/def/digitaltwin#hasComponents> <http://www.w3.org/2000/01/rdf-schema#label> "has components" .
 # 
 # https://w3id.org/def/digitaltwin#hasConnection
 <https://w3id.org/def/digitaltwin#hasConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/digitaltwin#hasConnection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/digitaltwin#DigitalTwinConnection> .
 <https://w3id.org/def/digitaltwin#hasConnection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/digitaltwin#Connection> .
+<https://w3id.org/def/digitaltwin#hasConnection> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different connections that the dt:DigitalTwinConnections contains."@en .
 <https://w3id.org/def/digitaltwin#hasConnection> <http://www.w3.org/2000/01/rdf-schema#label> "has connection" .
 # 
 # https://w3id.org/def/digitaltwin#hasConnectionPoint
@@ -104,11 +105,6 @@
 <https://w3id.org/def/digitaltwin#hasConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/digitaltwin#Connection> .
 <https://w3id.org/def/digitaltwin#hasConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/digitaltwin#ConnectionPoint> .
 <https://w3id.org/def/digitaltwin#hasConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "has connection point" .
-# 
-# https://w3id.org/def/digitaltwin#hasConnections
-<https://w3id.org/def/digitaltwin#hasConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/digitaltwin#hasConnections> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different connections that the dt:DigitalTwinConnections contains."@en .
-<https://w3id.org/def/digitaltwin#hasConnections> <http://www.w3.org/2000/01/rdf-schema#label> "has connections" .
 # 
 # https://w3id.org/def/digitaltwin#hasData
 <https://w3id.org/def/digitaltwin#hasData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -121,12 +117,8 @@
 <https://w3id.org/def/digitaltwin#hasDigitalTwinConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/digitaltwin#hasDigitalTwinConnection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/digitaltwin#DigitalTwin> .
 <https://w3id.org/def/digitaltwin#hasDigitalTwinConnection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/digitaltwin#DigitalTwinConnection> .
+<https://w3id.org/def/digitaltwin#hasDigitalTwinConnection> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different Digital Twin Connections that the digital twin contains."@en .
 <https://w3id.org/def/digitaltwin#hasDigitalTwinConnection> <http://www.w3.org/2000/01/rdf-schema#label> "has digital twin connection" .
-# 
-# https://w3id.org/def/digitaltwin#hasDigitalTwinConnections
-<https://w3id.org/def/digitaltwin#hasDigitalTwinConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/digitaltwin#hasDigitalTwinConnections> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different Digital Twin Connections that the digital twin contains."@en .
-<https://w3id.org/def/digitaltwin#hasDigitalTwinConnections> <http://www.w3.org/2000/01/rdf-schema#label> "has digital twin connections" .
 # 
 # https://w3id.org/def/digitaltwin#hasDigitalTwinData
 <https://w3id.org/def/digitaltwin#hasDigitalTwinData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -141,11 +133,15 @@
 <https://w3id.org/def/digitaltwin#hasDigitalTwinService> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/digitaltwin#DigitalTwinService> .
 <https://w3id.org/def/digitaltwin#hasDigitalTwinService> <http://www.w3.org/2000/01/rdf-schema#label> "has digital twin service" .
 # 
+# https://w3id.org/def/digitaltwin#hasFormat
+<https://w3id.org/def/digitaltwin#hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/digitaltwin#hasFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different extension formats that the models or data can be found."@en .
+<https://w3id.org/def/digitaltwin#hasFormat> <http://www.w3.org/2000/01/rdf-schema#label> "has format" .
+# 
 # https://w3id.org/def/digitaltwin#hasFormats
 <https://w3id.org/def/digitaltwin#hasFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/digitaltwin#hasFormats> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/digitaltwin#Model> .
 <https://w3id.org/def/digitaltwin#hasFormats> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/digitaltwin#Format> .
-<https://w3id.org/def/digitaltwin#hasFormats> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different extension formats that the models or data can be found."@en .
 <https://w3id.org/def/digitaltwin#hasFormats> <http://www.w3.org/2000/01/rdf-schema#label> "has formats" .
 # 
 # https://w3id.org/def/digitaltwin#hasInteractionAffordance
@@ -158,33 +154,21 @@
 <https://w3id.org/def/digitaltwin#hasModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/digitaltwin#hasModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/digitaltwin#VirtualEntity> .
 <https://w3id.org/def/digitaltwin#hasModel> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/digitaltwin#Model> .
+<https://w3id.org/def/digitaltwin#hasModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different models that the dt:VirtualEntitty contains."@en .
 <https://w3id.org/def/digitaltwin#hasModel> <http://www.w3.org/2000/01/rdf-schema#label> "has model" .
-# 
-# https://w3id.org/def/digitaltwin#hasModels
-<https://w3id.org/def/digitaltwin#hasModels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/digitaltwin#hasModels> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different models that the dt:VirtualEntitty contains."@en .
-<https://w3id.org/def/digitaltwin#hasModels> <http://www.w3.org/2000/01/rdf-schema#label> "has models" .
-# 
-# https://w3id.org/def/digitaltwin#hasPhysicalEntities
-<https://w3id.org/def/digitaltwin#hasPhysicalEntities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/digitaltwin#hasPhysicalEntities> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different Physical Entities that the digital twin contains."@en .
-<https://w3id.org/def/digitaltwin#hasPhysicalEntities> <http://www.w3.org/2000/01/rdf-schema#label> "has physical entities" .
 # 
 # https://w3id.org/def/digitaltwin#hasPhysicalEntity
 <https://w3id.org/def/digitaltwin#hasPhysicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/digitaltwin#hasPhysicalEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/digitaltwin#DigitalTwin> .
 <https://w3id.org/def/digitaltwin#hasPhysicalEntity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/digitaltwin#PhysicalEntity> .
+<https://w3id.org/def/digitaltwin#hasPhysicalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different Physical Entities that the digital twin contains."@en .
 <https://w3id.org/def/digitaltwin#hasPhysicalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "has physical entity" .
-# 
-# https://w3id.org/def/digitaltwin#hasVirtualEntities
-<https://w3id.org/def/digitaltwin#hasVirtualEntities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/digitaltwin#hasVirtualEntities> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different Virtual Entities that the digital twin contains."@en .
-<https://w3id.org/def/digitaltwin#hasVirtualEntities> <http://www.w3.org/2000/01/rdf-schema#label> "has virtual entities" .
 # 
 # https://w3id.org/def/digitaltwin#hasVirtualEntity
 <https://w3id.org/def/digitaltwin#hasVirtualEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/digitaltwin#hasVirtualEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/digitaltwin#DigitalTwin> .
 <https://w3id.org/def/digitaltwin#hasVirtualEntity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/digitaltwin#VirtualEntity> .
+<https://w3id.org/def/digitaltwin#hasVirtualEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes the different Virtual Entities that the digital twin contains."@en .
 <https://w3id.org/def/digitaltwin#hasVirtualEntity> <http://www.w3.org/2000/01/rdf-schema#label> "has virtual entity" .
 # 
 # 
