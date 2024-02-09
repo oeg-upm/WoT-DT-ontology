@@ -1,0 +1,231 @@
+{
+  "@context" : {
+    "hasDigitalTwinConnection" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinConnection",
+      "@type" : "@id"
+    },
+    "isInternal" : {
+      "@id" : "https://w3id.org/def/digitaltwin#isInternal",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/elements/1.1/created"
+    },
+    "MainComponent" : {
+      "@id" : "https://w3id.org/def/digitaltwin#MainComponent"
+    },
+    "hasExtension" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasExtension",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasModel",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/elements/1.1/license"
+    },
+    "DigitalTwinDimension" : {
+      "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinDimension"
+    },
+    "hasDigitalTwinConnections" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinConnections",
+      "@type" : "@id"
+    },
+    "SemanticModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#SemanticModel"
+    },
+    "Thing" : {
+      "@id" : "https://www.w3.org/2019/wot/td#Thing"
+    },
+    "isProvider" : {
+      "@id" : "https://w3id.org/def/digitaltwin#isProvider",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "DigitalTwinService" : {
+      "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinService"
+    },
+    "hasConnection" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasConnection",
+      "@type" : "@id"
+    },
+    "BehavioralModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#BehavioralModel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "DigitalTwin" : {
+      "@id" : "https://w3id.org/def/digitaltwin#DigitalTwin"
+    },
+    "Format" : {
+      "@id" : "https://w3id.org/def/digitaltwin#Format"
+    },
+    "DigitalTwinConnection" : {
+      "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinConnection"
+    },
+    "MappingModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#MappingModel"
+    },
+    "hasInteractionAffordance" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasInteractionAffordance",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "OntologyModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#OntologyModel"
+    },
+    "hasTarget" : {
+      "@id" : "https://www.w3.org/2019/wot/hypermedia#hasTarget",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Model" : {
+      "@id" : "https://w3id.org/def/digitaltwin#Model"
+    },
+    "PhysicalModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#PhysicalModel"
+    },
+    "InteractionAffordance" : {
+      "@id" : "https://www.w3.org/2019/wot/td#InteractionAffordance"
+    },
+    "hasPhysicalEntity" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasPhysicalEntity",
+      "@type" : "@id"
+    },
+    "hasForm" : {
+      "@id" : "https://www.w3.org/2019/wot/td#hasForm"
+    },
+    "hasVirtualEntity" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasVirtualEntity",
+      "@type" : "@id"
+    },
+    "VirtualEntity" : {
+      "@id" : "https://w3id.org/def/digitaltwin#VirtualEntity"
+    },
+    "DigitalTwinData" : {
+      "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinData"
+    },
+    "createdWith" : {
+      "@id" : "https://w3id.org/mod#createdWith"
+    },
+    "hasConnectionPoint" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasConnectionPoint",
+      "@type" : "@id"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "hasFormats" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasFormats",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "GeometricModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#GeometricModel"
+    },
+    "RulesModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#RulesModel"
+    },
+    "DigitalTwinInstance" : {
+      "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinInstance"
+    },
+    "ConnectionPoint" : {
+      "@id" : "https://w3id.org/def/digitaltwin#ConnectionPoint"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasPhysicalEntities" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasPhysicalEntities",
+      "@type" : "@id"
+    },
+    "AggregatedDigitalTwin" : {
+      "@id" : "https://w3id.org/def/digitaltwin#AggregatedDigitalTwin"
+    },
+    "hasData" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasData",
+      "@type" : "@id"
+    },
+    "hasConnections" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasConnections",
+      "@type" : "@id"
+    },
+    "Connection" : {
+      "@id" : "https://w3id.org/def/digitaltwin#Connection"
+    },
+    "SHACLModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#SHACLModel"
+    },
+    "hasVirtualEntities" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasVirtualEntities",
+      "@type" : "@id"
+    },
+    "Component" : {
+      "@id" : "https://w3id.org/def/digitaltwin#Component"
+    },
+    "hasDigitalTwinService" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinService",
+      "@type" : "@id"
+    },
+    "aggregates" : {
+      "@id" : "https://w3id.org/def/digitaltwin#aggregates",
+      "@type" : "@id"
+    },
+    "Resource" : {
+      "@id" : "http://www.w3.org/ns/dcat#Resource"
+    },
+    "hasComponents" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasComponents",
+      "@type" : "@id"
+    },
+    "hasUriTemplateSchema" : {
+      "@id" : "https://www.w3.org/2019/wot/td#hasUriTemplateSchema"
+    },
+    "Actuator" : {
+      "@id" : "https://saref.etsi.org/core/Actuator"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/elements/1.1/contributor"
+    },
+    "hasComponent" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasComponent",
+      "@type" : "@id"
+    },
+    "hasDigitalTwinData" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinData",
+      "@type" : "@id"
+    },
+    "Device" : {
+      "@id" : "https://saref.etsi.org/core/Device"
+    },
+    "PhysicalEntity" : {
+      "@id" : "https://w3id.org/def/digitaltwin#PhysicalEntity"
+    },
+    "hasModels" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasModels",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "Sensor" : {
+      "@id" : "https://saref.etsi.org/core/Sensor"
+    }
+  }
+}
