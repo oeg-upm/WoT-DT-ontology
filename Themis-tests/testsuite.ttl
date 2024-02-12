@@ -84,4 +84,4 @@
 
 :Test20 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
                 owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin subClassOf td" .
+       <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin subClassOf td#:Thing" .
