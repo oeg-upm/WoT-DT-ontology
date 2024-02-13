@@ -137,12 +137,12 @@ dt: a owl:Ontology ;
         "Raúl García Castro" ;
     dc:created "2024-01-18"^^xsd:date ;
     dc:creator "Salvador González Gerpe" ;
-    dc:description "Digital Twin ontology used to define Digital Twins and Semantic Digital Twins by dimensions."@en ;
+    dc:description "Digital Twin ontology used to define Digital Twins and Semantic Digital Twins by dimensions using Web of Things."@en ;
     dc:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dc:title "The Digital Twin ontology"@en ;
+    dc:title "DTwOT: The Digital Twin WoT Ontology"@en ;
     vann:preferredNamespacePrefix "dt" ;
     vann:preferredNamespaceUri dt: ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "0.2.0" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
 dt:AggregatedDigitalTwin a owl:Class ;
