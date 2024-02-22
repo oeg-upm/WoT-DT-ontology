@@ -313,7 +313,10 @@ dt:RulesModel a owl:Class ;
 
 dt:SHACLModel a owl:Class ;
     rdfs:label "S H A C L Model",
-        "SHACL Model"@en ;
+        "SHACL Model"@en .
+
+dt:ShapesModel a owl:Class ;
+    rdfs:label "Shapes Model" ;
     rdfs:comment "Model that contains the data validation rules allowing the data to be validated."@en ;
     rdfs:subClassOf dt:SemanticModel .
 
