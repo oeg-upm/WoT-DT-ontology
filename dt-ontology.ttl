@@ -110,9 +110,6 @@ spdx:checksum a owl:DatatypeProperty ;
 rdfs:comment a owl:AnnotationProperty ;
     rdfs:label "comment" .
 
-rdfs:label a owl:AnnotationProperty ;
-    rdfs:label "label" .
-
 owl:versionInfo a owl:AnnotationProperty .
 
 adms:status a owl:DatatypeProperty ;
@@ -310,10 +307,6 @@ dt:RulesModel a owl:Class ;
     rdfs:label "Rules Model" ;
     rdfs:comment "A set of rules extracted from the historical data obtained from the physical model, whose function is to provide the virtual entity with a judgment for decision making, optimization, evaluation, prediction and maintenance."@en ;
     rdfs:subClassOf dt:Model .
-
-dt:SHACLModel a owl:Class ;
-    rdfs:label "S H A C L Model",
-        "SHACL Model"@en .
 
 dt:ShapesModel a owl:Class ;
     rdfs:label "Shapes Model" ;
