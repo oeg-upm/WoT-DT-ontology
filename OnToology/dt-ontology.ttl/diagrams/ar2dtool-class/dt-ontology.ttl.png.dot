@@ -1,0 +1,57 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "dt:DigitalTwin" "dcat:Distribution" "dt:VirtualEntity" "dcat:DataService" "dt:DigitalTwinData" "dcat:Resource" "dcat:Catalog" "dt:AggregatedDigitalTwin" "dt:ConnectionPoint" "td:InteractionAffordance" "dt:Connection" "dcat:DatasetSeries" "dt:Entity" "dt:Model" "dt:DigitalTwinService" "dcat:Relationship" "dt:DigitalTwinInstance" "dt:DigitalTwinConnection" "dcat:Dataset" "dt:Format" "dcat:CatalogRecord" ; /*classes style*/
+	"NULL" -> "dt:hasModel" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasEntity" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasVirtualEntity" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasFormat" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasDigitalTwinConnection" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasDigitalTwinService" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasData" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:containsInteractionAffordance" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasDigitalTwinData" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasConnection" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasProvider" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasConsumer" [ label = "owl:onProperty" ];
+	"dt:" -> "dt:" [ label = "vann:preferredNamespaceUri" ];
+	"dt:" -> "https://chowlk.linkeddata.es/" [ label = "mod:createdWith" ];
+	"dt:" -> "https://creativecommons.org/licenses/by/4.0/" [ label = "dc:license" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "hctl:hasTarget" ];
+	"dcat:Catalog" -> "dcat:Resource" [ label = "dcat:resource" ];
+	"dt:AggregatedDigitalTwin" -> "dt:DigitalTwinInstance" [ label = "dt:aggregate" ];
+	"owl:Thing" -> "xsd:string" [ label = "dcterms:description" ];
+	"dt:DigitalTwin" -> "dt:Entity" [ label = "dt:hasEntity" ];
+	"dt:DigitalTwin" -> "dt:DigitalTwinService" [ label = "dt:hasDigitalTwinService" ];
+	"dt:Connection" -> "dt:ConnectionPoint" [ label = "dt:hasConsumer" ];
+	"dt:DigitalTwinConnection" -> "dt:Connection" [ label = "dt:hasConnection" ];
+	"dcat:Distribution" -> "dcat:DataService" [ label = "dcat:accessService" ];
+	"dcat:Catalog" -> "dcat:CatalogRecord" [ label = "dcat:record" ];
+	"dcat:Resource" -> "dcat:Relationship" [ label = "dcat:qualifiedRelation" ];
+	"dcat:CatalogRecord" -> "dcat:Resource" [ label = "foaf:primaryTopic" ];
+	"dcat:Catalog" -> "dcat:Dataset" [ label = "dcat:dataset" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "td:observable" ];
+	"dcat:DataService" -> "dcat:Dataset" [ label = "dcat:servesDataset" ];
+	"dt:DigitalTwinService" -> "td:InteractionAffordance" [ label = "dt:containsInteractionAffordance" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "dt:isProvider" ];
+	"dcat:Catalog" -> "dcat:DataService" [ label = "dcat:service" ];
+	"dt:Model" -> "dt:Format" [ label = "dt:hasFormat" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "dcterms:identifier" ];
+	"dt:DigitalTwin" -> "dt:DigitalTwinData" [ label = "dt:hasDigitalTwinData" ];
+	"dcat:Catalog" -> "dcat:Catalog" [ label = "dcat:catalog" ];
+	"dcat:Relationship" -> "dcat:Resource" [ label = "dcterms:relation" ];
+	"dt:DigitalTwin" -> "dt:VirtualEntity" [ label = "dt:hasVirtualEntity" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "td:safe" ];
+	"dt:VirtualEntity" -> "dt:Model" [ label = "dt:hasModel" ];
+	"dt:DigitalTwinData" -> "dcat:Resource" [ label = "dt:hasData" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "dt:isInternal" ];
+	"dcat:Dataset" -> "dcat:Distribution" [ label = "dcat:distribution" ];
+	"dcat:Dataset" -> "dcat:DatasetSeries" [ label = "dcat:inSeries" ];
+	"dt:Connection" -> "dt:ConnectionPoint" [ label = "dt:hasProvider" ];
+	"dt:DigitalTwin" -> "dt:DigitalTwinConnection" [ label = "dt:hasDigitalTwinConnection" ];
+	"owl:Thing" -> "xsd:string" [ label = "dcterms:title" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "td:synchronous" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "td:idempotent" ];
+	"owl:Thing" -> "xsd:string" [ label = "dt:hasExtension" ];
+
+}
