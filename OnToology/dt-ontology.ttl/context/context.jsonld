@@ -126,6 +126,10 @@
     "DigitalTwin" : {
       "@id" : "https://w3id.org/def/digitaltwin#DigitalTwin"
     },
+    "hasProvider" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasProvider",
+      "@type" : "@id"
+    },
     "hasPart" : {
       "@id" : "http://purl.org/dc/terms/hasPart"
     },
@@ -150,10 +154,6 @@
     "MappingModel" : {
       "@id" : "https://w3id.org/def/digitaltwin#MappingModel"
     },
-    "hasInteractionAffordance" : {
-      "@id" : "https://w3id.org/def/digitaltwin#hasInteractionAffordance",
-      "@type" : "@id"
-    },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
     },
@@ -165,6 +165,10 @@
     },
     "packageFormat" : {
       "@id" : "http://www.w3.org/ns/dcat#packageFormat"
+    },
+    "hasEntity" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasEntity",
+      "@type" : "@id"
     },
     "hasTarget" : {
       "@id" : "https://www.w3.org/2019/wot/hypermedia#hasTarget",
@@ -226,10 +230,6 @@
     "createdWith" : {
       "@id" : "https://w3id.org/mod#createdWith"
     },
-    "hasConnectionPoint" : {
-      "@id" : "https://w3id.org/def/digitaltwin#hasConnectionPoint",
-      "@type" : "@id"
-    },
     "prev" : {
       "@id" : "http://www.w3.org/ns/dcat#prev"
     },
@@ -239,6 +239,10 @@
     },
     "keyword" : {
       "@id" : "http://www.w3.org/ns/dcat#keyword"
+    },
+    "hasConsumer" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasConsumer",
+      "@type" : "@id"
     },
     "hasPolicy" : {
       "@id" : "http://www.w3.org/ns/odrl/2/hasPolicy"
@@ -306,6 +310,10 @@
     "version" : {
       "@id" : "http://www.w3.org/ns/dcat#version"
     },
+    "containsInteractionAffordance" : {
+      "@id" : "https://w3id.org/def/digitaltwin#containsInteractionAffordance",
+      "@type" : "@id"
+    },
     "modified" : {
       "@id" : "http://purl.org/dc/terms/modified"
     },
@@ -323,6 +331,9 @@
     },
     "Component" : {
       "@id" : "https://w3id.org/def/digitaltwin#Component"
+    },
+    "Entity" : {
+      "@id" : "https://w3id.org/def/digitaltwin#Entity"
     },
     "replaces" : {
       "@id" : "http://purl.org/dc/terms/replaces"

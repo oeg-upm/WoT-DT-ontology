@@ -3,10 +3,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "2"
+    "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#hasConnectionPoint"
+    "@id" : "https://w3id.org/def/digitaltwin#hasConsumer"
   } ]
 }, {
   "@id" : "_:genid10",
@@ -16,7 +16,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#hasFormat"
+    "@id" : "https://w3id.org/def/digitaltwin#containsInteractionAffordance"
   } ]
 }, {
   "@id" : "_:genid11",
@@ -26,7 +26,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#hasComponent"
+    "@id" : "https://w3id.org/def/digitaltwin#hasFormat"
   } ]
 }, {
   "@id" : "_:genid12",
@@ -41,12 +41,12 @@
 }, {
   "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinConnection"
+    "@id" : "https://w3id.org/def/digitaltwin#hasProvider"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -56,7 +56,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinData"
+    "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinConnection"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -66,7 +66,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinService"
+    "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinData"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -76,7 +76,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#hasPhysicalEntity"
+    "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinService"
   } ]
 }, {
   "@id" : "_:genid6",
@@ -91,12 +91,12 @@
 }, {
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#hasConnection"
+    "@id" : "https://w3id.org/def/digitaltwin#hasEntity"
   } ]
 }, {
   "@id" : "_:genid8",
@@ -106,7 +106,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#hasData"
+    "@id" : "https://w3id.org/def/digitaltwin#hasConnection"
   } ]
 }, {
   "@id" : "_:genid9",
@@ -116,7 +116,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#hasInteractionAffordance"
+    "@id" : "https://w3id.org/def/digitaltwin#hasData"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/contributor",
@@ -791,6 +791,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
   } ]
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#ConnectionPoint",
@@ -811,8 +813,6 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3.org/2019/wot/td#Thing"
   }, {
-    "@id" : "_:genid2"
-  }, {
     "@id" : "_:genid3"
   }, {
     "@id" : "_:genid4"
@@ -820,6 +820,8 @@
     "@id" : "_:genid5"
   }, {
     "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
   } ]
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinConnection",
@@ -834,7 +836,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinDimension"
   }, {
-    "@id" : "_:genid7"
+    "@id" : "_:genid8"
   } ]
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinData",
@@ -849,7 +851,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinDimension"
   }, {
-    "@id" : "_:genid8"
+    "@id" : "_:genid9"
   } ]
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinDimension",
@@ -887,7 +889,16 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinDimension"
   }, {
-    "@id" : "_:genid9"
+    "@id" : "_:genid10"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/digitaltwin#Entity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinDimension"
   } ]
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#Format",
@@ -951,7 +962,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#ConnectionPoint"
   }, {
-    "@id" : "_:genid10"
+    "@id" : "_:genid11"
   } ]
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#OntologyModel",
@@ -975,11 +986,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Physical Entity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinDimension"
-  }, {
-    "@id" : "_:genid11"
   } ]
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#PhysicalModel",
@@ -1061,20 +1067,26 @@
     "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinInstance"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/digitaltwin#containsInteractionAffordance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contains interaction affordance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3.org/2019/wot/td#InteractionAffordance"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/digitaltwin#hasComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property that describes the different components that the dt:PhysicalEntitty contains."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#PhysicalEntity"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has component"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#Component"
   } ]
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#hasConnection",
@@ -1093,13 +1105,13 @@
     "@id" : "https://w3id.org/def/digitaltwin#Connection"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/digitaltwin#hasConnectionPoint",
+  "@id" : "https://w3id.org/def/digitaltwin#hasConsumer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#Connection"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has connection point"
+    "@value" : "has consumer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/digitaltwin#ConnectionPoint"
@@ -1165,6 +1177,18 @@
     "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinService"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/digitaltwin#hasEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/digitaltwin#DigitalTwin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/digitaltwin#Entity"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/digitaltwin#hasExtension",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1194,18 +1218,6 @@
     "@id" : "https://w3id.org/def/digitaltwin#Format"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/digitaltwin#hasInteractionAffordance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinService"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has interaction affordance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://www.w3.org/2019/wot/td#InteractionAffordance"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/digitaltwin#hasModel",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1228,14 +1240,20 @@
     "@language" : "en",
     "@value" : "Property that describes the different Physical Entities that the digital twin contains."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#DigitalTwin"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has physical entity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/digitaltwin#hasProvider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/digitaltwin#Connection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has provider"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/def/digitaltwin#PhysicalEntity"
+    "@id" : "https://w3id.org/def/digitaltwin#ConnectionPoint"
   } ]
 }, {
   "@id" : "https://w3id.org/def/digitaltwin#hasVirtualEntity",

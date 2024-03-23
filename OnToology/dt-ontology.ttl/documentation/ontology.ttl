@@ -161,10 +161,15 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "aggregate" .
 
 
+###  https://w3id.org/def/digitaltwin#containsInteractionAffordance
+:containsInteractionAffordance rdf:type owl:ObjectProperty ;
+                               rdfs:domain :DigitalTwinService ;
+                               rdfs:range <https://www.w3.org/2019/wot/td#InteractionAffordance> ;
+                               rdfs:label "contains interaction affordance" .
+
+
 ###  https://w3id.org/def/digitaltwin#hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
-              rdfs:domain :PhysicalEntity ;
-              rdfs:range :Component ;
               rdfs:comment "Property that describes the different components that the dt:PhysicalEntitty contains."@en ;
               rdfs:label "has component" .
 
@@ -177,11 +182,11 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "has connection" .
 
 
-###  https://w3id.org/def/digitaltwin#hasConnectionPoint
-:hasConnectionPoint rdf:type owl:ObjectProperty ;
-                    rdfs:domain :Connection ;
-                    rdfs:range :ConnectionPoint ;
-                    rdfs:label "has connection point" .
+###  https://w3id.org/def/digitaltwin#hasConsumer
+:hasConsumer rdf:type owl:ObjectProperty ;
+             rdfs:domain :Connection ;
+             rdfs:range :ConnectionPoint ;
+             rdfs:label "has consumer" .
 
 
 ###  https://w3id.org/def/digitaltwin#hasData
@@ -215,19 +220,19 @@ xsd:date rdf:type rdfs:Datatype .
                        rdfs:label "has digital twin service" .
 
 
+###  https://w3id.org/def/digitaltwin#hasEntity
+:hasEntity rdf:type owl:ObjectProperty ;
+           rdfs:domain :DigitalTwin ;
+           rdfs:range :Entity ;
+           rdfs:label "has entity" .
+
+
 ###  https://w3id.org/def/digitaltwin#hasFormat
 :hasFormat rdf:type owl:ObjectProperty ;
            rdfs:domain :Model ;
            rdfs:range :Format ;
            rdfs:comment "Property that describes the different extension formats that the models or data can be found."@en ;
            rdfs:label "has format" .
-
-
-###  https://w3id.org/def/digitaltwin#hasInteractionAffordance
-:hasInteractionAffordance rdf:type owl:ObjectProperty ;
-                          rdfs:domain :DigitalTwinService ;
-                          rdfs:range <https://www.w3.org/2019/wot/td#InteractionAffordance> ;
-                          rdfs:label "has interaction affordance" .
 
 
 ###  https://w3id.org/def/digitaltwin#hasModel
@@ -240,10 +245,15 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/def/digitaltwin#hasPhysicalEntity
 :hasPhysicalEntity rdf:type owl:ObjectProperty ;
-                   rdfs:domain :DigitalTwin ;
-                   rdfs:range :PhysicalEntity ;
                    rdfs:comment "Property that describes the different Physical Entities that the digital twin contains."@en ;
                    rdfs:label "has physical entity" .
+
+
+###  https://w3id.org/def/digitaltwin#hasProvider
+:hasProvider rdf:type owl:ObjectProperty ;
+             rdfs:domain :Connection ;
+             rdfs:range :ConnectionPoint ;
+             rdfs:label "has provider" .
 
 
 ###  https://w3id.org/def/digitaltwin#hasVirtualEntity
@@ -715,8 +725,12 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/def/digitaltwin#Connection
 :Connection rdf:type owl:Class ;
             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty :hasConnectionPoint ;
-                              owl:cardinality "2"^^xsd:nonNegativeInteger
+                              owl:onProperty :hasConsumer ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasProvider ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
                             ] ;
             rdfs:comment "Existing connection between different dt:DigitalTwinDimension."@en ;
             rdfs:label "Connection" .
@@ -743,12 +757,12 @@ xsd:date rdf:type rdfs:Datatype .
                                owl:minCardinality "1"^^xsd:nonNegativeInteger
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasPhysicalEntity ;
+                               owl:onProperty :hasVirtualEntity ;
                                owl:minCardinality "1"^^xsd:nonNegativeInteger
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasVirtualEntity ;
-                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                               owl:onProperty :hasEntity ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
                              ] ;
              rdfs:comment "A realistic representation of all product life cycle components using physical, virtual and interaction data."@en ;
              rdfs:label "Digital Twin" .
@@ -793,11 +807,17 @@ xsd:date rdf:type rdfs:Datatype .
 :DigitalTwinService rdf:type owl:Class ;
                     rdfs:subClassOf :DigitalTwinDimension ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty :hasInteractionAffordance ;
+                                      owl:onProperty :containsInteractionAffordance ;
                                       owl:minCardinality "1"^^xsd:nonNegativeInteger
                                     ] ;
                     rdfs:comment "This dimension of the digital twin contains all the services that are used to perform all the processes of the digital twin."@en ;
                     rdfs:label "Digital Twin Service" .
+
+
+###  https://w3id.org/def/digitaltwin#Entity
+:Entity rdf:type owl:Class ;
+        rdfs:subClassOf :DigitalTwinDimension ;
+        rdfs:label "Entity" .
 
 
 ###  https://w3id.org/def/digitaltwin#Format
@@ -847,11 +867,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/def/digitaltwin#PhysicalEntity
 :PhysicalEntity rdf:type owl:Class ;
-                rdfs:subClassOf :DigitalTwinDimension ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty :hasComponent ;
-                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
-                                ] ;
                 rdfs:comment "This dimension of the digital twin consists of various subsystems, objects and sensory devices. These subsystems can include dynamic systems, control systems, maintenance systems, etc., and can be combined for a specific task."@en ;
                 rdfs:label "Physical Entity" .
 
