@@ -1,11 +1,10 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "dt:Component" "dcat:Dataset" "dt:MainComponent" "dt:DigitalTwinDimension" "dcat:DataService" "saref:Device" "dt:AggregatedDigitalTwin" "td:InteractionAffordance" "dt:BehavioralModel" "td:ActionAffordance" "dt:SemanticModel" "dt:DigitalTwinService" "dt:DigitalTwinConnection" "dt:GeometricModel" "td:EventAffordance" "dt:OntologyModel" "dt:DigitalTwin" "dt:PhysicalEntity" "dt:DigitalTwinInstance" "dcat:DatasetSeries" "dt:RulesModel" "dcat:Resource" "dcat:Catalog" "dt:VirtualEntity" "dt:PhysicalModel" "dt:DigitalTwinData" "dt:MappingModel" "saref:Sensor" "dt:Model" "saref:Actuator" "td:Thing" "td:PropertyAffordance" "dt:ShapesModel" "dt:ConnectionPoint" ; /*classes style*/
+node [shape = rectangle, color="black"]; "dt:DigitalTwin" "dt:BehavioralModel" "td:Thing" "dt:VirtualEntity" "dcat:DataService" "dt:OntologyModel" "dt:ShapesModel" "td:ActionAffordance" "dt:MappingModel" "dt:DigitalTwinData" "dt:DigitalTwinDimension" "dcat:Resource" "dt:RulesModel" "dcat:Catalog" "saref:Device" "td:EventAffordance" "dt:AggregatedDigitalTwin" "dt:MainComponent" "td:PropertyAffordance" "dt:PhysicalModel" "dt:ConnectionPoint" "td:InteractionAffordance" "dt:GeometricModel" "dcat:DatasetSeries" "saref:Actuator" "dt:Entity" "dt:Model" "dt:DigitalTwinService" "dt:SemanticModel" "dt:DigitalTwinInstance" "dt:DigitalTwinConnection" "dcat:Dataset" "saref:Sensor" "dt:Component" ; /*classes style*/
 	"dt:DigitalTwinInstance" -> "dt:DigitalTwin" [ label = "rdfs:subClassOf" ];
 	"dcat:DatasetSeries" -> "dcat:Dataset" [ label = "rdfs:subClassOf" ];
 	"dt:BehavioralModel" -> "dt:Model" [ label = "rdfs:subClassOf" ];
-	"dt:PhysicalEntity" -> "dt:DigitalTwinDimension" [ label = "rdfs:subClassOf" ];
 	"td:EventAffordance" -> "td:InteractionAffordance" [ label = "rdfs:subClassOf" ];
 	"dt:OntologyModel" -> "dt:SemanticModel" [ label = "rdfs:subClassOf" ];
 	"dt:PhysicalModel" -> "dt:Model" [ label = "rdfs:subClassOf" ];
@@ -17,6 +16,7 @@ node [shape = rectangle, color="black"]; "dt:Component" "dcat:Dataset" "dt:MainC
 	"saref:Sensor" -> "saref:Device" [ label = "rdfs:subClassOf" ];
 	"dt:DigitalTwinService" -> "dt:DigitalTwinDimension" [ label = "rdfs:subClassOf" ];
 	"dt:DigitalTwin" -> "td:Thing" [ label = "rdfs:subClassOf" ];
+	"dt:Entity" -> "dt:DigitalTwinDimension" [ label = "rdfs:subClassOf" ];
 	"dt:MainComponent" -> "dt:Component" [ label = "rdfs:subClassOf" ];
 	"dcat:Resource" -> "dt:ConnectionPoint" [ label = "rdfs:subClassOf" ];
 	"dt:AggregatedDigitalTwin" -> "dt:DigitalTwin" [ label = "rdfs:subClassOf" ];

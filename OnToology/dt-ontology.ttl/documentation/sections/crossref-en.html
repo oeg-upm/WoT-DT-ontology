@@ -74,6 +74,9 @@ This section provides details for each class and property defined by WoTDT: The 
          <a href="#http://www.w3.org/ns/dcat#Distribution" title="http://www.w3.org/ns/dcat#Distribution">Distribution</a>
       </li>
       <li>
+         <a href="#Entity" title="https://w3id.org/def/digitaltwin#Entity">Entity</a>
+      </li>
+      <li>
          <a href="#https://www.w3.org/2019/wot/td#EventAffordance" title="https://www.w3.org/2019/wot/td#EventAffordance">Event Affordance</a>
       </li>
       <li>
@@ -271,11 +274,6 @@ This section provides details for each class and property defined by WoTDT: The 
             <sup class="type-c" title="class">c</sup>, <a href="#MainComponent" title="https://w3id.org/def/digitaltwin#MainComponent">Main Component</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasComponent" title="https://w3id.org/def/digitaltwin#hasComponent">has component</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="Connection">
@@ -293,8 +291,8 @@ This section provides details for each class and property defined by WoTDT: The 
          <dd/>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasConnectionPoint"
-               title="https://w3id.org/def/digitaltwin#hasConnectionPoint">has connection point</a>
+            <a href="#hasConsumer" title="https://w3id.org/def/digitaltwin#hasConsumer">has consumer</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasProvider" title="https://w3id.org/def/digitaltwin#hasProvider">has provider</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -322,8 +320,8 @@ This section provides details for each class and property defined by WoTDT: The 
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasConnectionPoint"
-               title="https://w3id.org/def/digitaltwin#hasConnectionPoint">has connection point</a>
+            <a href="#hasConsumer" title="https://w3id.org/def/digitaltwin#hasConsumer">has consumer</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasProvider" title="https://w3id.org/def/digitaltwin#hasProvider">has provider</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -460,8 +458,7 @@ This section provides details for each class and property defined by WoTDT: The 
                title="https://w3id.org/def/digitaltwin#hasDigitalTwinData">has digital twin data</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasDigitalTwinService"
                title="https://w3id.org/def/digitaltwin#hasDigitalTwinService">has digital twin service</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasPhysicalEntity"
-               title="https://w3id.org/def/digitaltwin#hasPhysicalEntity">has physical entity</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasEntity" title="https://w3id.org/def/digitaltwin#hasEntity">has entity</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasVirtualEntity"
                title="https://w3id.org/def/digitaltwin#hasVirtualEntity">has virtual entity</a>
             <sup class="type-op" title="object property">op</sup>
@@ -547,7 +544,7 @@ This section provides details for each class and property defined by WoTDT: The 
                title="https://w3id.org/def/digitaltwin#DigitalTwinData">Digital Twin Data</a>
             <sup class="type-c" title="class">c</sup>, <a href="#DigitalTwinService"
                title="https://w3id.org/def/digitaltwin#DigitalTwinService">Digital Twin Service</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#PhysicalEntity" title="https://w3id.org/def/digitaltwin#PhysicalEntity">Physical Entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Entity" title="https://w3id.org/def/digitaltwin#Entity">Entity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#VirtualEntity" title="https://w3id.org/def/digitaltwin#VirtualEntity">Virtual Entity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -595,8 +592,8 @@ This section provides details for each class and property defined by WoTDT: The 
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasInteractionAffordance"
-               title="https://w3id.org/def/digitaltwin#hasInteractionAffordance">has interaction affordance</a>
+            <a href="#containsInteractionAffordance"
+               title="https://w3id.org/def/digitaltwin#containsInteractionAffordance">contains interaction affordance</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -623,6 +620,27 @@ This section provides details for each class and property defined by WoTDT: The 
          <dt>is in range of</dt>
          <dd>
             <a href="#http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">distribution</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Entity">
+      <h3>Entity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#Entity</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DigitalTwinDimension"
+               title="https://w3id.org/def/digitaltwin#DigitalTwinDimension">Digital Twin Dimension</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasEntity" title="https://w3id.org/def/digitaltwin#hasEntity">has entity</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -703,8 +721,8 @@ This section provides details for each class and property defined by WoTDT: The 
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasInteractionAffordance"
-               title="https://w3id.org/def/digitaltwin#hasInteractionAffordance">has interaction affordance</a>
+            <a href="#containsInteractionAffordance"
+               title="https://w3id.org/def/digitaltwin#containsInteractionAffordance">contains interaction affordance</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -812,25 +830,6 @@ This section provides details for each class and property defined by WoTDT: The 
       <div class="comment">
          <span class="markdown">This dimension of the digital twin consists of various subsystems, objects and sensory devices. These subsystems can include dynamic systems, control systems, maintenance systems, etc., and can be combined for a specific task.</span>
       </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#DigitalTwinDimension"
-               title="https://w3id.org/def/digitaltwin#DigitalTwinDimension">Digital Twin Dimension</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasComponent" title="https://w3id.org/def/digitaltwin#hasComponent">has component</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasPhysicalEntity"
-               title="https://w3id.org/def/digitaltwin#hasPhysicalEntity">has physical entity</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="PhysicalModel">
       <h3>Physical Model<sup class="type-c" title="class">c</sup>
@@ -1058,6 +1057,10 @@ This section provides details for each class and property defined by WoTDT: The 
          </a>
       </li>
       <li>
+         <a href="#containsInteractionAffordance"
+            title="https://w3id.org/def/digitaltwin#containsInteractionAffordance">contains interaction affordance</a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/ns/dcat#dataset" title="http://www.w3.org/ns/dcat#dataset">
             <span>dataset</span>
          </a>
@@ -1074,8 +1077,7 @@ This section provides details for each class and property defined by WoTDT: The 
          <a href="#hasConnection" title="https://w3id.org/def/digitaltwin#hasConnection">has connection</a>
       </li>
       <li>
-         <a href="#hasConnectionPoint"
-            title="https://w3id.org/def/digitaltwin#hasConnectionPoint">has connection point</a>
+         <a href="#hasConsumer" title="https://w3id.org/def/digitaltwin#hasConsumer">has consumer</a>
       </li>
       <li>
          <a href="#hasData" title="https://w3id.org/def/digitaltwin#hasData">has data</a>
@@ -1093,11 +1095,10 @@ This section provides details for each class and property defined by WoTDT: The 
             title="https://w3id.org/def/digitaltwin#hasDigitalTwinService">has digital twin service</a>
       </li>
       <li>
-         <a href="#hasFormat" title="https://w3id.org/def/digitaltwin#hasFormat">has format</a>
+         <a href="#hasEntity" title="https://w3id.org/def/digitaltwin#hasEntity">has entity</a>
       </li>
       <li>
-         <a href="#hasInteractionAffordance"
-            title="https://w3id.org/def/digitaltwin#hasInteractionAffordance">has interaction affordance</a>
+         <a href="#hasFormat" title="https://w3id.org/def/digitaltwin#hasFormat">has format</a>
       </li>
       <li>
          <a href="#hasModel" title="https://w3id.org/def/digitaltwin#hasModel">has model</a>
@@ -1105,6 +1106,9 @@ This section provides details for each class and property defined by WoTDT: The 
       <li>
          <a href="#hasPhysicalEntity"
             title="https://w3id.org/def/digitaltwin#hasPhysicalEntity">has physical entity</a>
+      </li>
+      <li>
+         <a href="#hasProvider" title="https://w3id.org/def/digitaltwin#hasProvider">has provider</a>
       </li>
       <li>
          <a href="#hasVirtualEntity"
@@ -1226,6 +1230,30 @@ This section provides details for each class and property defined by WoTDT: The 
          </dl>
       </div>
    </div>
+   <div class="entity" id="containsInteractionAffordance">
+      <h3>contains interaction affordance<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#containsInteractionAffordance</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DigitalTwinService"
+                  title="https://w3id.org/def/digitaltwin#DigitalTwinService">Digital Twin Service</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3.org/2019/wot/td#InteractionAffordance"
+                  title="https://www.w3.org/2019/wot/td#InteractionAffordance">Interaction Affordance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="http://www.w3.org/ns/dcat#dataset">
       <h3>dataset<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1284,20 +1312,6 @@ This section provides details for each class and property defined by WoTDT: The 
       <div class="comment">
          <span class="markdown">Property that describes the different components that the dt:PhysicalEntitty contains.</span>
       </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#PhysicalEntity" title="https://w3id.org/def/digitaltwin#PhysicalEntity">Physical Entity</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Component" title="https://w3id.org/def/digitaltwin#Component">Component</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="hasConnection">
       <h3>has connection<sup class="type-op" title="object property">op</sup>
@@ -1325,13 +1339,13 @@ This section provides details for each class and property defined by WoTDT: The 
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasConnectionPoint">
-      <h3>has connection point<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasConsumer">
+      <h3>has consumer<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasConnectionPoint</p>
+         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasConsumer</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -1449,6 +1463,28 @@ This section provides details for each class and property defined by WoTDT: The 
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasEntity">
+      <h3>has entity<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasEntity</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DigitalTwin" title="https://w3id.org/def/digitaltwin#DigitalTwin">Digital Twin</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Entity" title="https://w3id.org/def/digitaltwin#Entity">Entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasFormat">
       <h3>has format<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1469,30 +1505,6 @@ This section provides details for each class and property defined by WoTDT: The 
             <dt>has range</dt>
             <dd>
                <a href="#Format" title="https://w3id.org/def/digitaltwin#Format">Format</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasInteractionAffordance">
-      <h3>has interaction affordance<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasInteractionAffordance</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#DigitalTwinService"
-                  title="https://w3id.org/def/digitaltwin#DigitalTwinService">Digital Twin Service</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://www.w3.org/2019/wot/td#InteractionAffordance"
-                  title="https://www.w3.org/2019/wot/td#InteractionAffordance">Interaction Affordance</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1533,16 +1545,25 @@ This section provides details for each class and property defined by WoTDT: The 
       <div class="comment">
          <span class="markdown">Property that describes the different Physical Entities that the digital twin contains.</span>
       </div>
+   </div>
+   <div class="entity" id="hasProvider">
+      <h3>has provider<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/digitaltwin#hasProvider</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#DigitalTwin" title="https://w3id.org/def/digitaltwin#DigitalTwin">Digital Twin</a>
+               <a href="#Connection" title="https://w3id.org/def/digitaltwin#Connection">Connection</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#PhysicalEntity" title="https://w3id.org/def/digitaltwin#PhysicalEntity">Physical Entity</a>
+               <a href="#ConnectionPoint"
+                  title="https://w3id.org/def/digitaltwin#ConnectionPoint">Connection Point</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
