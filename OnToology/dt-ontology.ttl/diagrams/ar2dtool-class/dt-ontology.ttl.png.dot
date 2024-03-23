@@ -1,0 +1,57 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "dt:DigitalTwin" "http://www.w3.org/ns/dcat#Distribution" "dt:VirtualEntity" "http://www.w3.org/ns/dcat#DataService" "dt:DigitalTwinData" "http://www.w3.org/ns/dcat#Resource" "http://www.w3.org/ns/dcat#Catalog" "dt:AggregatedDigitalTwin" "dt:ConnectionPoint" "https://www.w3.org/2019/wot/td#InteractionAffordance" "dt:Connection" "http://www.w3.org/ns/dcat#DatasetSeries" "dt:Entity" "dt:Model" "dt:DigitalTwinService" "http://www.w3.org/ns/dcat#Relationship" "dt:DigitalTwinInstance" "dt:DigitalTwinConnection" "http://www.w3.org/ns/dcat#Dataset" "dt:Format" "http://www.w3.org/ns/dcat#CatalogRecord" ; /*classes style*/
+	"NULL" -> "dt:hasModel" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasEntity" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasVirtualEntity" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasFormat" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasDigitalTwinConnection" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasDigitalTwinService" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasData" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:containsInteractionAffordance" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasDigitalTwinData" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasConnection" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasProvider" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasConsumer" [ label = "owl:onProperty" ];
+	"dt:" -> "dt:" [ label = ":preferredNamespaceUri" ];
+	"dt:" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
+	"dt:" -> "https://chowlk.linkeddata.es/" [ label = ":createdWith" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "https://www.w3.org/2019/wot/hypermedia#hasTarget" ];
+	"http://www.w3.org/ns/dcat#Catalog" -> "http://www.w3.org/ns/dcat#Resource" [ label = "http://www.w3.org/ns/dcat#resource" ];
+	"dt:AggregatedDigitalTwin" -> "dt:DigitalTwinInstance" [ label = "dt:aggregate" ];
+	"owl:Thing" -> "xsd:string" [ label = "http://purl.org/dc/terms/description" ];
+	"dt:DigitalTwin" -> "dt:Entity" [ label = "dt:hasEntity" ];
+	"dt:DigitalTwin" -> "dt:DigitalTwinService" [ label = "dt:hasDigitalTwinService" ];
+	"dt:Connection" -> "dt:ConnectionPoint" [ label = "dt:hasConsumer" ];
+	"dt:DigitalTwinConnection" -> "dt:Connection" [ label = "dt:hasConnection" ];
+	"http://www.w3.org/ns/dcat#Distribution" -> "http://www.w3.org/ns/dcat#DataService" [ label = "http://www.w3.org/ns/dcat#accessService" ];
+	"http://www.w3.org/ns/dcat#Catalog" -> "http://www.w3.org/ns/dcat#CatalogRecord" [ label = "http://www.w3.org/ns/dcat#record" ];
+	"http://www.w3.org/ns/dcat#Resource" -> "http://www.w3.org/ns/dcat#Relationship" [ label = "http://www.w3.org/ns/dcat#qualifiedRelation" ];
+	"http://www.w3.org/ns/dcat#CatalogRecord" -> "http://www.w3.org/ns/dcat#Resource" [ label = "http://xmlns.com/foaf/0.1/primaryTopic" ];
+	"http://www.w3.org/ns/dcat#Catalog" -> "http://www.w3.org/ns/dcat#Dataset" [ label = "http://www.w3.org/ns/dcat#dataset" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "https://www.w3.org/2019/wot/td#observable" ];
+	"http://www.w3.org/ns/dcat#DataService" -> "http://www.w3.org/ns/dcat#Dataset" [ label = "http://www.w3.org/ns/dcat#servesDataset" ];
+	"dt:DigitalTwinService" -> "https://www.w3.org/2019/wot/td#InteractionAffordance" [ label = "dt:containsInteractionAffordance" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "dt:isProvider" ];
+	"http://www.w3.org/ns/dcat#Catalog" -> "http://www.w3.org/ns/dcat#DataService" [ label = "http://www.w3.org/ns/dcat#service" ];
+	"dt:Model" -> "dt:Format" [ label = "dt:hasFormat" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "http://purl.org/dc/terms/identifier" ];
+	"dt:DigitalTwin" -> "dt:DigitalTwinData" [ label = "dt:hasDigitalTwinData" ];
+	"http://www.w3.org/ns/dcat#Catalog" -> "http://www.w3.org/ns/dcat#Catalog" [ label = "http://www.w3.org/ns/dcat#catalog" ];
+	"http://www.w3.org/ns/dcat#Relationship" -> "http://www.w3.org/ns/dcat#Resource" [ label = "http://purl.org/dc/terms/relation" ];
+	"dt:DigitalTwin" -> "dt:VirtualEntity" [ label = "dt:hasVirtualEntity" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "https://www.w3.org/2019/wot/td#safe" ];
+	"dt:VirtualEntity" -> "dt:Model" [ label = "dt:hasModel" ];
+	"dt:DigitalTwinData" -> "http://www.w3.org/ns/dcat#Resource" [ label = "dt:hasData" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "dt:isInternal" ];
+	"http://www.w3.org/ns/dcat#Dataset" -> "http://www.w3.org/ns/dcat#Distribution" [ label = "http://www.w3.org/ns/dcat#distribution" ];
+	"http://www.w3.org/ns/dcat#Dataset" -> "http://www.w3.org/ns/dcat#DatasetSeries" [ label = "http://www.w3.org/ns/dcat#inSeries" ];
+	"dt:Connection" -> "dt:ConnectionPoint" [ label = "dt:hasProvider" ];
+	"dt:DigitalTwin" -> "dt:DigitalTwinConnection" [ label = "dt:hasDigitalTwinConnection" ];
+	"owl:Thing" -> "xsd:string" [ label = "http://purl.org/dc/terms/title" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "https://www.w3.org/2019/wot/td#synchronous" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "https://www.w3.org/2019/wot/td#idempotent" ];
+	"owl:Thing" -> "xsd:string" [ label = "dt:hasExtension" ];
+
+}
