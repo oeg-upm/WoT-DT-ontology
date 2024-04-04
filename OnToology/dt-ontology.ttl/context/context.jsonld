@@ -1,0 +1,433 @@
+{
+  "@context" : {
+    "spatial" : {
+      "@id" : "http://purl.org/dc/terms/spatial"
+    },
+    "hasDigitalTwinConnection" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinConnection",
+      "@type" : "@id"
+    },
+    "endpointDescription" : {
+      "@id" : "http://www.w3.org/ns/dcat#endpointDescription"
+    },
+    "resource" : {
+      "@id" : "http://www.w3.org/ns/dcat#resource"
+    },
+    "isInternal" : {
+      "@id" : "https://w3id.org/def/digitaltwin#isInternal",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "wasGeneratedBy" : {
+      "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/elements/1.1/created"
+    },
+    "CatalogRecord" : {
+      "@id" : "http://www.w3.org/ns/dcat#CatalogRecord"
+    },
+    "MainComponent" : {
+      "@id" : "https://w3id.org/def/digitaltwin#MainComponent"
+    },
+    "hasExtension" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasExtension",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "qualifiedAttribution" : {
+      "@id" : "http://www.w3.org/ns/prov#qualifiedAttribution"
+    },
+    "Dataset" : {
+      "@id" : "http://www.w3.org/ns/dcat#Dataset"
+    },
+    "hasModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasModel",
+      "@type" : "@id"
+    },
+    "compressFormat" : {
+      "@id" : "http://www.w3.org/ns/dcat#compressFormat"
+    },
+    "primaryTopic" : {
+      "@id" : "http://xmlns.com/foaf/0.1/primaryTopic"
+    },
+    "Relationship" : {
+      "@id" : "http://www.w3.org/ns/dcat#Relationship"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "DigitalTwinDimension" : {
+      "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinDimension"
+    },
+    "accrualPeriodicity" : {
+      "@id" : "http://purl.org/dc/terms/accrualPeriodicity"
+    },
+    "SemanticModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#SemanticModel"
+    },
+    "Distribution" : {
+      "@id" : "http://www.w3.org/ns/dcat#Distribution"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "Thing" : {
+      "@id" : "https://www.w3.org/2019/wot/td#Thing"
+    },
+    "dataset" : {
+      "@id" : "http://www.w3.org/ns/dcat#dataset"
+    },
+    "isProvider" : {
+      "@id" : "https://w3id.org/def/digitaltwin#isProvider"
+    },
+    "distribution" : {
+      "@id" : "http://www.w3.org/ns/dcat#distribution"
+    },
+    "downloadURL" : {
+      "@id" : "http://www.w3.org/ns/dcat#downloadURL"
+    },
+    "DatasetSeries" : {
+      "@id" : "http://www.w3.org/ns/dcat#DatasetSeries"
+    },
+    "hasVersion" : {
+      "@id" : "http://www.w3.org/ns/dcat#hasVersion"
+    },
+    "temporalResolution" : {
+      "@id" : "http://www.w3.org/ns/dcat#temporalResolution"
+    },
+    "record" : {
+      "@id" : "http://www.w3.org/ns/dcat#record"
+    },
+    "versionNotes" : {
+      "@id" : "http://www.w3.org/ns/adms#versionNotes"
+    },
+    "DigitalTwinService" : {
+      "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinService"
+    },
+    "landingPage" : {
+      "@id" : "http://www.w3.org/ns/dcat#landingPage"
+    },
+    "hasConnection" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasConnection",
+      "@type" : "@id"
+    },
+    "identifiers" : {
+      "@id" : "http://purl.org/dc/terms/identifiers"
+    },
+    "BehavioralModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#BehavioralModel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "DigitalTwin" : {
+      "@id" : "https://w3id.org/def/digitaltwin#DigitalTwin"
+    },
+    "hasProvider" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasProvider",
+      "@type" : "@id"
+    },
+    "hasPart" : {
+      "@id" : "http://purl.org/dc/terms/hasPart"
+    },
+    "spatialResolutionInMeters" : {
+      "@id" : "http://www.w3.org/ns/dcat#spatialResolutionInMeters"
+    },
+    "PropertyAffordance" : {
+      "@id" : "https://www.w3.org/2019/wot/td#PropertyAffordance"
+    },
+    "previousVersion" : {
+      "@id" : "http://www.w3.org/ns/dcat#previousVersion"
+    },
+    "Format" : {
+      "@id" : "https://w3id.org/def/digitaltwin#Format"
+    },
+    "homepage" : {
+      "@id" : "http://xmlns.com/foaf/0.1/homepage"
+    },
+    "DigitalTwinConnection" : {
+      "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinConnection"
+    },
+    "MappingModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#MappingModel"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "OntologyModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#OntologyModel"
+    },
+    "DataService" : {
+      "@id" : "http://www.w3.org/ns/dcat#DataService"
+    },
+    "packageFormat" : {
+      "@id" : "http://www.w3.org/ns/dcat#packageFormat"
+    },
+    "hasTarget" : {
+      "@id" : "https://www.w3.org/2019/wot/hypermedia#hasTarget",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "themeTaxonomy" : {
+      "@id" : "http://www.w3.org/ns/dcat#themeTaxonomy"
+    },
+    "Model" : {
+      "@id" : "https://w3id.org/def/digitaltwin#Model"
+    },
+    "PhysicalModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#PhysicalModel"
+    },
+    "aggregate" : {
+      "@id" : "https://w3id.org/def/digitaltwin#aggregate",
+      "@type" : "@id"
+    },
+    "InteractionAffordance" : {
+      "@id" : "https://www.w3.org/2019/wot/td#InteractionAffordance"
+    },
+    "idempotent" : {
+      "@id" : "https://www.w3.org/2019/wot/td#idempotent",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasPhysicalEntity" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasPhysicalEntity",
+      "@type" : "@id"
+    },
+    "hasForm" : {
+      "@id" : "https://www.w3.org/2019/wot/td#hasForm"
+    },
+    "observable" : {
+      "@id" : "https://www.w3.org/2019/wot/td#observable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Catalog" : {
+      "@id" : "http://www.w3.org/ns/dcat#Catalog"
+    },
+    "accessService" : {
+      "@id" : "http://www.w3.org/ns/dcat#accessService"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/terms/rights"
+    },
+    "hasVirtualEntity" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasVirtualEntity",
+      "@type" : "@id"
+    },
+    "VirtualEntity" : {
+      "@id" : "https://w3id.org/def/digitaltwin#VirtualEntity"
+    },
+    "DigitalTwinData" : {
+      "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinData"
+    },
+    "status" : {
+      "@id" : "http://www.w3.org/ns/adms#status"
+    },
+    "createdWith" : {
+      "@id" : "https://w3id.org/mod#createdWith"
+    },
+    "prev" : {
+      "@id" : "http://www.w3.org/ns/dcat#prev"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "keyword" : {
+      "@id" : "http://www.w3.org/ns/dcat#keyword"
+    },
+    "hasConsumer" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasConsumer",
+      "@type" : "@id"
+    },
+    "hasPolicy" : {
+      "@id" : "http://www.w3.org/ns/odrl/2/hasPolicy"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "GeometricModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#GeometricModel"
+    },
+    "RulesModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#RulesModel"
+    },
+    "hadRole" : {
+      "@id" : "http://www.w3.org/ns/dcat#hadRole"
+    },
+    "ShapesModel" : {
+      "@id" : "https://w3id.org/def/digitaltwin#ShapesModel"
+    },
+    "qualifiedRelation" : {
+      "@id" : "http://www.w3.org/ns/dcat#qualifiedRelation"
+    },
+    "byteSize" : {
+      "@id" : "http://www.w3.org/ns/dcat#byteSize"
+    },
+    "DigitalTwinInstance" : {
+      "@id" : "https://w3id.org/def/digitaltwin#DigitalTwinInstance"
+    },
+    "ConnectionPoint" : {
+      "@id" : "https://w3id.org/def/digitaltwin#ConnectionPoint"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "last" : {
+      "@id" : "http://www.w3.org/ns/dcat#last"
+    },
+    "type" : {
+      "@id" : "http://purl.org/dc/terms/type"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher"
+    },
+    "mediaType" : {
+      "@id" : "http://www.w3.org/ns/dcat#mediaType"
+    },
+    "EventAffordance" : {
+      "@id" : "https://www.w3.org/2019/wot/td#EventAffordance"
+    },
+    "synchronous" : {
+      "@id" : "https://www.w3.org/2019/wot/td#synchronous",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "AggregatedDigitalTwin" : {
+      "@id" : "https://w3id.org/def/digitaltwin#AggregatedDigitalTwin"
+    },
+    "hasData" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasData",
+      "@type" : "@id"
+    },
+    "Connection" : {
+      "@id" : "https://w3id.org/def/digitaltwin#Connection"
+    },
+    "version" : {
+      "@id" : "http://www.w3.org/ns/dcat#version"
+    },
+    "containsInteractionAffordance" : {
+      "@id" : "https://w3id.org/def/digitaltwin#containsInteractionAffordance",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "endpointURL" : {
+      "@id" : "http://www.w3.org/ns/dcat#endpointURL"
+    },
+    "inSeries" : {
+      "@id" : "http://www.w3.org/ns/dcat#inSeries"
+    },
+    "isReferencedBy" : {
+      "@id" : "http://purl.org/dc/terms/isReferencedBy"
+    },
+    "accessRights" : {
+      "@id" : "http://purl.org/dc/terms/accessRights"
+    },
+    "Component" : {
+      "@id" : "https://w3id.org/def/digitaltwin#Component"
+    },
+    "Entity" : {
+      "@id" : "https://w3id.org/def/digitaltwin#Entity"
+    },
+    "replaces" : {
+      "@id" : "http://purl.org/dc/terms/replaces"
+    },
+    "ActionAffordance" : {
+      "@id" : "https://www.w3.org/2019/wot/td#ActionAffordance"
+    },
+    "hasDigitalTwinService" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinService",
+      "@type" : "@id"
+    },
+    "contactPoint" : {
+      "@id" : "http://www.w3.org/ns/dcat#contactPoint"
+    },
+    "Resource" : {
+      "@id" : "http://www.w3.org/ns/dcat#Resource"
+    },
+    "hasCurrentVersion" : {
+      "@id" : "http://www.w3.org/ns/dcat#hasCurrentVersion"
+    },
+    "checksum" : {
+      "@id" : "http://spdx.org/rdf/terms#checksum"
+    },
+    "hasUriTemplateSchema" : {
+      "@id" : "https://www.w3.org/2019/wot/td#hasUriTemplateSchema"
+    },
+    "service" : {
+      "@id" : "http://www.w3.org/ns/dcat#service"
+    },
+    "Actuator" : {
+      "@id" : "https://saref.etsi.org/core/Actuator"
+    },
+    "theme" : {
+      "@id" : "http://www.w3.org/ns/dcat#theme"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "servesDataset" : {
+      "@id" : "http://www.w3.org/ns/dcat#servesDataset"
+    },
+    "language" : {
+      "@id" : "http://purl.org/dc/terms/language"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/elements/1.1/contributor"
+    },
+    "hasComponent" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasComponent",
+      "@type" : "@id"
+    },
+    "hasDigitalTwinData" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasDigitalTwinData",
+      "@type" : "@id"
+    },
+    "Device" : {
+      "@id" : "https://saref.etsi.org/core/Device"
+    },
+    "catalog" : {
+      "@id" : "http://www.w3.org/ns/dcat#catalog"
+    },
+    "conformsTo" : {
+      "@id" : "http://purl.org/dc/terms/conformsTo"
+    },
+    "hasFormat" : {
+      "@id" : "https://w3id.org/def/digitaltwin#hasFormat",
+      "@type" : "@id"
+    },
+    "PhysicalEntity" : {
+      "@id" : "https://w3id.org/def/digitaltwin#PhysicalEntity"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "format" : {
+      "@id" : "http://purl.org/dc/terms/format"
+    },
+    "accessURL" : {
+      "@id" : "http://www.w3.org/ns/dcat#accessURL"
+    },
+    "safe" : {
+      "@id" : "https://www.w3.org/2019/wot/td#safe",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "relation" : {
+      "@id" : "http://purl.org/dc/terms/relation"
+    },
+    "temporal" : {
+      "@id" : "http://purl.org/dc/terms/temporal"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/ns/dcat#first"
+    },
+    "Sensor" : {
+      "@id" : "https://saref.etsi.org/core/Sensor"
+    }
+  }
+}
