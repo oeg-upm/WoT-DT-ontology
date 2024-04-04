@@ -409,6 +409,7 @@ dt:Format a owl:Class ;
 
 dt:containsInteractionAffordance a owl:ObjectProperty ;
     rdfs:label "contains interaction affordance" ;
+    rdfs:comment "Property that describes the different interaction affordances that the dt:DigitalTwinServices contains."@en ;
     rdfs:domain dt:DigitalTwinService ;
     rdfs:range td:InteractionAffordance .
 
@@ -426,6 +427,7 @@ dt:hasConnection a owl:ObjectProperty ;
 
 dt:hasConsumer a owl:ObjectProperty ;
     rdfs:label "has consumer" ;
+    rdfs:comment "Property that describes if the connection point is the consumer of the information."@en ;
     rdfs:domain dt:Connection ;
     rdfs:range dt:ConnectionPoint .
 
@@ -472,6 +474,7 @@ dt:hasPhysicalEntity a owl:ObjectProperty ;
 
 dt:hasProvider a owl:ObjectProperty ;
     rdfs:label "has provider" ;
+    rdfs:comment "Property that describes if the connection point is the provider of the information."@en ;
     rdfs:domain dt:Connection ;
     rdfs:range dt:ConnectionPoint .
 
