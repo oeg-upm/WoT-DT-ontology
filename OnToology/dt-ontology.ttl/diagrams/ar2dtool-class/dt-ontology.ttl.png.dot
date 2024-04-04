@@ -5,8 +5,8 @@ node [shape = rectangle, color="orange"]; "dt:DigitalTwin" "dcat:Distribution" "
 	"NULL" -> "dt:hasModel" [ label = "owl:onProperty" ];
 	"NULL" -> "dt:hasVirtualEntity" [ label = "owl:onProperty" ];
 	"NULL" -> "dt:hasFormat" [ label = "owl:onProperty" ];
-	"NULL" -> "dt:hasDigitalTwinService" [ label = "owl:onProperty" ];
 	"NULL" -> "dt:hasDigitalTwinConnection" [ label = "owl:onProperty" ];
+	"NULL" -> "dt:hasDigitalTwinService" [ label = "owl:onProperty" ];
 	"NULL" -> "dt:hasPhysicalEntity" [ label = "owl:onProperty" ];
 	"NULL" -> "dt:hasData" [ label = "owl:onProperty" ];
 	"NULL" -> "dt:containsInteractionAffordance" [ label = "owl:onProperty" ];
